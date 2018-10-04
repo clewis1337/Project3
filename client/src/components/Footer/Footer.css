@@ -8,6 +8,7 @@
   font-weight: bold;
   font-family: "Bookman Old Style";
   text-shadow: 2px 2px grey;
+  box-shadow: 0 3px 6px grey, 0 3px 6px #999
 }
 
 .footer span {
@@ -18,4 +19,5 @@
   padding-top: 3px;
   background:#FF9933;
   text-shadow: 2px 2px grey;
+  box-shadow: 0 3px 6px grey, 0 3px 6px #999
 }
