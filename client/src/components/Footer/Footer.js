@@ -1,10 +1,11 @@
 import React from "react";
 import "./Footer.css";
 
-const Footer = () => (
-  <footer className="footer">
-    <span>Pupster 2017</span>
-  </footer>
-);
 
+
+const Footer = () => (
+	<header className = "footer">
+		<p>ENG Share - 2018</p>
+	</header>
+);
 export default Footer;

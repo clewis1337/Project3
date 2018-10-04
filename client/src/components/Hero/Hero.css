@@ -1,33 +1,26 @@
-.hero {
-  height: 500px;
-  background-size: cover;
-  background-position: center;
-  position: relative;
+.header{
+	background-color: #FF9933;
+	position: relative;
+	width: 100%;
 }
 
-.hero::after {
-  content: "";
-  display: block;
-  opacity: .4;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: black;
+h1{
+	text-align: center;
+	font-size: 90px;
+	font-weight: bold;
+  color:white;
+  text-shadow: 2px 2px grey;
+  font-family: "Bookman Old Style";
 }
 
-.hero * {
-  position: relative;
-  z-index: 2;
+h2, h3{
+	text-align: center;
+	font-size: 25px;
+  color:white;
+  text-shadow: 2px 2pX grey;
+  font-family: "Bookman Old Style";
 }
 
-.hero h1, .hero h2 {
-  color: white;
-}
-
-.hero h1 {
-  font-size: 60px;
-  padding-top: 140px;
-  margin-top: 0;
+h3{
+  padding-bottom: 40px;
 }

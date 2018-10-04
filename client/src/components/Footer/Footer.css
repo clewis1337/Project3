@@ -1,7 +1,13 @@
 .footer {
-  min-height: 100px;
-  background: #E5E5E5;
+  min-height: 50px;
+  background:#FF9933;
   position: relative;
+  color: white;
+  text-align: center;
+  font-size: 15px;
+  font-weight: bold;
+  font-family: "Bookman Old Style";
+  text-shadow: 2px 2px grey;
 }
 
 .footer span {
@@ -9,6 +15,7 @@
   bottom: 0;
   left: 0;
   right: 0;
-  padding: 3px;
-  background: #B8B8B8;
+  padding-top: 3px;
+  background:#FF9933;
+  text-shadow: 2px 2px grey;
 }
