@@ -5,7 +5,7 @@ import Container from "../components/Container";
 import Row from "../components/Row";
 import Col from "../components/Col";
 import MenuOptions from "../utils/MenuOptions" //All the menu options/topics that will be on the front page
-
+import Posts from "../utils/Posts";
 //Format of menu options, they are an array of objects in MenuOptions
 //{ 
 //  topic: BlahBlah 

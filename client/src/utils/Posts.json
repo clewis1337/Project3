@@ -1,0 +1,38 @@
+[
+    {
+        "_id": 1,
+        "topicID": 1,
+        "date": "10/4/2018 6:00pm",
+        "author": "Craig",
+        "authorAvatar": "picOfCraig.jpg",
+        "authorLevel": "noob",
+        "content": "Here is a lesson plan for 3rd graders.  It's fun ^^"
+    },
+    {
+        "_id": 2,
+        "topicID": 1,
+        "date": "10/1/2018 3:00pm",
+        "author": "Kayla",
+        "authorAvatar": "picOfKayla.jpg",
+        "authorLevel": "noob",
+        "content": "Here is a lesson plan for 2nd graders!  Yay."
+    },
+    {
+        "_id": 3,
+        "topicID": 2,
+        "date": "10/1/2018 5:00pm",
+        "author": "Kristian",
+        "authorAvatar": "picOfKristian.jpg",
+        "authorLevel": "master",
+        "content": "Here is a lesson plan for 6th graders.  It's okay"
+    },    
+    {
+        "_id": 4,
+        "topicID": 4,
+        "date": "10/4/2018 6:00pm",
+        "author": "Ericka",
+        "authorAvatar": "picOfEricka.jpg",
+        "authorLevel": "noob",
+        "content": "Here is a lesson plan for HIGH SHCHOOL."
+    }
+]
