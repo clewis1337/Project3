@@ -1,6 +1,11 @@
 import React from "react";
+import styled from "react-emotion";
 
-const Container = props =>
-  <div className={`container${props.fluid ? "-fluid" : ""}`} {...props} />;
+const ContainerStyled = styled('div')({
+    marginTop: "100px"
+});
 
+const Container = () => (
+	<ContainerStyled></ContainerStyled>
+);
 export default Container;
