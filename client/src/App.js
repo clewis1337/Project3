@@ -4,6 +4,7 @@ import Home from "./pages/Home";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Container from "./components/Container";
+import Table from "./components/Table"
 
 
 const App = () => (

@@ -6,6 +6,7 @@ import Col from "../components/Col";
 import MenuOptions from "../utils/MenuOptions" //All the menu options/topics that will be on the front page
 import Posts from "../utils/Posts";
 import Container from "../components/Container"
+import Table from "../components/Table"
 //Format of menu options, they are an array of objects in MenuOptions
 //{ 
 //  topic: BlahBlah 
@@ -20,12 +21,29 @@ import Container from "../components/Container"
           />
         )) */
 const Home = () => (
-
+<div>
     <Hero backgroundImage="https://i.imgur.com/qkdpN.jpg">
       <h1>Pupster</h1>
       <h2>They're the Good Boys and Girls</h2>
     </Hero>
-      
+
+    <Table>
+       
+      <BootstrapTable data={ products }>
+        <TableHeaderColumn dataField='id' isKey>Product ID</TableHeaderColumn>
+        <TableHeaderColumn dataField='name'>Product Name</TableHeaderColumn>
+        <TableHeaderColumn dataField='price'>Product Price</TableHeaderColumn>
+      </BootstrapTable>
+    
+   
+    </Table>   
+    </div>
+  
+ 
 );
+   
+   
+
+
 
 export default Home;
