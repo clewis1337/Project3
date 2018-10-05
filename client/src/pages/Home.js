@@ -20,11 +20,16 @@ import Container from "../components/Container"
           />
         )) */
 const Home = () => (
+<<<<<<< HEAD
   // <Container>
+=======
+
+>>>>>>> 9dd438fdf6711aad9721ea94d1e5cfd78246e92b
     <Hero backgroundImage="https://i.imgur.com/qkdpN.jpg">
       <h1>Pupster</h1>
       <h2>They're the Good Boys and Girls</h2>
     </Hero>
+<<<<<<< HEAD
     //   <Row>
     //     <Col size="md-12">
     //       <h1>Welcome To Pupster!</h1>
@@ -69,6 +74,9 @@ const Home = () => (
     //     </Col>
     //   </Row>
     // </Container>
+=======
+      
+>>>>>>> 9dd438fdf6711aad9721ea94d1e5cfd78246e92b
 );
 
 export default Home;
