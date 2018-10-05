@@ -1,12 +1,11 @@
-import React from "react";
-// import styled from "react-emotion";
+// import React from "react";
+
 
 // const ContainerStyled = styled('div')({
 //     marginTop: "100px"
 // });
 
-const Container = () => (
-//	<ContainerStyled></ContainerStyled>
-<div></div>
-);
-export default Container;
+// const Container = () => (
+// 	<ContainerStyled></ContainerStyled>
+// );
+// export default Container;
