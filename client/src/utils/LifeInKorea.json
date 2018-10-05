@@ -1,0 +1,26 @@
+[
+    {
+        "topic": "Finding an Apartment",
+        "link": "/FindingAnApartment",
+        "topicsCount": 2,
+        "postsCount": 13
+    },
+    {
+        "topic": "Paying Your Bills",
+        "link": "/PayingYourBills",
+        "topicsCount": 10,
+        "postsCount": 50
+    },
+    {
+        "topic": "Teaching Advice",
+        "link": "/TeachingAdvice",
+        "topicsCount": 8,
+        "postsCount": 40
+    },
+    {
+        "topic": "Venting - relieve your stress!",
+        "link": "/Venting",
+        "topicsCount": 4,
+        "postsCount": 36
+    }
+]

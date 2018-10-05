@@ -1,7 +1,7 @@
 import React from "react";
-import "./Hero.css";
+import "./Jumbotron.css";
 
-const Hero = () => (
+const Jumbotron = () => (
 	<header className = "header">
 		<h1>ENG Share</h1>
 		<h2>Teaching English As a Second Language </h2>
@@ -10,4 +10,4 @@ const Hero = () => (
 );
 
 
-export default Hero;
+export default Jumbotron;

@@ -1,11 +1,7 @@
-// import React from "react";
+import React from "react";
+import "./Container.css";
 
-
-// const ContainerStyled = styled('div')({
-//     marginTop: "100px"
-// });
-
-// const Container = () => (
-// 	<ContainerStyled></ContainerStyled>
-// );
-// export default Container;
+const Container = (props) => (
+	<div className="Container">{props.children}</div>
+);
+export default Container;

@@ -1,0 +1,20 @@
+    [
+        {
+            "topic": "Welcome Area",
+            "link": "/WelcomeArea",
+            "topicsCount": 2,
+            "postsCount": 13
+        },
+        {
+            "topic": "Announcements",
+            "link": "/Announcements",
+            "topicsCount": 5,
+            "postsCount": 15
+        },
+        {
+            "topic": "GENERAL CHAT & DISCUSSION",
+            "link": "/GeneralChat",
+            "topicsCount": 4,
+            "postsCount": 6
+        }
+    ]

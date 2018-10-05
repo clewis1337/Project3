@@ -1,0 +1,24 @@
+.TableTitle {
+    font-size: 35px
+}
+
+table {
+    margin-left:auto; 
+    margin-right:auto;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border: 2px solid red;
+}
+
+.Topic {
+    font-size: 20px;
+    flex: 4
+}
+
+.countStuff {
+    flex: 1
+}
+
+tr {
+    display: flex
+}
