@@ -1,11 +1,11 @@
 import React from "react";
 import Hero from "../components/Hero";
 import Navbar from "../components/Navbar";
-import Container from "../components/Container";
 import Row from "../components/Row";
 import Col from "../components/Col";
 import MenuOptions from "../utils/MenuOptions" //All the menu options/topics that will be on the front page
 import Posts from "../utils/Posts";
+import Container from "../components/Container"
 //Format of menu options, they are an array of objects in MenuOptions
 //{ 
 //  topic: BlahBlah 
@@ -20,12 +20,11 @@ import Posts from "../utils/Posts";
           />
         )) */
 const Home = () => (
-  <div>
+  <Container>
     <Hero backgroundImage="https://i.imgur.com/qkdpN.jpg">
       <h1>Pupster</h1>
       <h2>They're the Good Boys and Girls</h2>
     </Hero>
-    <Container style={{ marginTop: 30 }}>
       <Row>
         <Col size="md-12">
           <h1>Welcome To Pupster!</h1>
@@ -70,7 +69,6 @@ const Home = () => (
         </Col>
       </Row>
     </Container>
-  </div>
 );
 
 export default Home;
