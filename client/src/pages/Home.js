@@ -20,7 +20,7 @@ import Container from "../components/Container"
           />
         )) */
 const Home = () => (
-  <Container>
+  <div>
     <Hero backgroundImage="https://i.imgur.com/qkdpN.jpg">
       <h1>Pupster</h1>
       <h2>They're the Good Boys and Girls</h2>
@@ -68,7 +68,7 @@ const Home = () => (
           </p>
         </Col>
       </Row>
-    </Container>
+    </div>
 );
 
 export default Home;
