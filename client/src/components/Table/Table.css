@@ -1,0 +1,17 @@
+.cards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    justify-content: space-around;
+    justify-content: space-evenly;
+  
+}
+
+.link{
+    text-align: center;
+}
+
+.img{
+   height:250px;
+   width: 250px;
+}

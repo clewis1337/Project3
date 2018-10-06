@@ -4,6 +4,7 @@ import Navbar from "../components/Navbar";
 import Posts from "../utils/Posts";
 import Container from "../components/Container";
 import DirectoryTable from "../components/DirectoryTable";
+import Table from "../components/Table";
 
 //Dummy Data For Now, these will be updated from an API later.
 import General from "../utils/General";
@@ -33,17 +34,13 @@ class Home extends Component {
           <h2>They're the Good Boys and Girls</h2>
         </Jumbotron>
         <DirectoryTable 
-          TableTitle="General And Getting Started"
-          TableData={this.state.General}
-        />
-        <DirectoryTable 
           TableTitle="Lesson Plans"
           TableData={this.state.LessonPlans}
         />
-        <DirectoryTable 
-          TableTitle="Life In Korea"
-          TableData={this.state.LifeInKorea}
-        />
+
+        <Table>
+          </Table>
+       
       </Container>
     )
   }
