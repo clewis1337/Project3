@@ -1,32 +1,8 @@
 [
     {
-        "topic": "Elementary School",
-        "link": "/ElementarySchool",
-        "topicsCount": 15,
-        "posts": 36
-    },
-    {
-        "topic": "Middle School",
-        "link": "/MiddleSchool",
-        "topicsCount": 8,
-        "posts": 40
-    },
-    {
-        "topic": "High School",
-        "link": "/HighSchool",
-        "topicsCount": 7,
-        "postsCount": 50
-    },
-    {
-        "topic": "Misc Lesson Plans",
-        "link": "/MiscLessonPlans",
-        "topicsCount": 2,
-        "postsCount": 55
-    },
-    {
-        "topic": "Misc Discussion and Hangout",
-        "link": "/MiscDiscussion",
-        "topicsCount": 10,
-        "postsCount": 33
+        "topic": "Grade Level",
+        "link": "/Grade Level"
+      
     }
+  
 ]
