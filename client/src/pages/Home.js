@@ -28,10 +28,7 @@ class Home extends Component {
   render(){
     return (
       <Container>
-        <Jumbotron backgroundImage="https://i.imgur.com/qkdpN.jpg">
-          <h1>Pupster</h1>
-          <h2>They're the Good Boys and Girls</h2>
-        </Jumbotron>
+        <Jumbotron backgroundImage="https://i.imgur.com/qkdpN.jpg" />
         <DirectoryTable 
           TableTitle="General And Getting Started"
           TableData={this.state.General}
