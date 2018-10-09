@@ -9,7 +9,7 @@
 
 .link{
     text-align: center;
-    margin-top: 15px;
+    margin-top: 35px;
     margin-bottom: 15px;
 }
 
@@ -23,5 +23,13 @@
     width:300px;
     box-shadow: 3px 3px orange, -1em 0 .4em olive;
     margin-top: 20px;
- 
+    
 }
+
+#cover {
+    transition: transform .5s;
+  }
+  
+  #cover:hover {
+    transform: scale(1.2);
+  }
