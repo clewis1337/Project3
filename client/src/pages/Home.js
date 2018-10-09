@@ -30,10 +30,8 @@ class Home extends Component {
     return (
       <Container>
         <Jumbotron backgroundImage="https://i.imgur.com/qkdpN.jpg" />
-        <DirectoryTable 
-          TableTitle="Lesson Plans"
-          TableData={this.state.LessonPlans}
-        />
+        <DirectoryTable> </DirectoryTable>
+    
 
         <Table>
           </Table>

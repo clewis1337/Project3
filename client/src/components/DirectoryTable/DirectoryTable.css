@@ -22,3 +22,15 @@ table {
 tr {
     display: flex
 }
+
+h4{
+
+    font-size: 35px;
+    color:#FF9933;
+    text-align: center;
+	font-weight: bold;
+  text-shadow: 2px 2px grey;
+  font-family: 'Delius Swash Caps', cursive;
+
+   
+}

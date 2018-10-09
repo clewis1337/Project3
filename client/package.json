@@ -4,6 +4,7 @@
   "private": true,
   "proxy": "http://localhost:3001/",
   "dependencies": {
+    "all": "0.0.0",
     "axios": "^0.18.0",
     "emotion": "^9.2.12",
     "react": "^16.5.2",

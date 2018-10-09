@@ -9,9 +9,19 @@
 
 .link{
     text-align: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
 }
 
 .img{
    height:250px;
    width: 250px;
+}
+
+#cover{
+    height: 320px;
+    width:300px;
+    box-shadow: 3px 3px orange, -1em 0 .4em olive;
+    margin-top: 20px;
+ 
 }
