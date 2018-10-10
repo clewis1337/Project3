@@ -3,10 +3,22 @@
 }
 
 .postWrapper {
-    border: black 3px solid;
+    box-shadow: 3px 3px orange, -1em 0 .4em olive;
     margin: 10px;
+    margin-top: 100px;
+    margin-bottom: 50px;
+    padding: 40px;
+    margin-right: 100px;
+    margin-left: 100px;
 }
 
 img {
     height: 200px;
+    margin-top: 10px;
+    align-content: center;
+    
+}
+
+.author{
+   text-align: left;
 }
