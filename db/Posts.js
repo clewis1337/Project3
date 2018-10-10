@@ -1,7 +1,9 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
+const Schema = mongoose.Schema;
 
-const PostSchema = new mongoose.Schema({
-    topicID: {
+// Define movie schema
+var postSchema = new Schema({
+  topicID: {
     type: Number,
     default: ''
     },
@@ -26,3 +28,8 @@ const PostSchema = new mongoose.Schema({
         default: ''
     }
 });
+
+// Export Mongoose model
+const Post = mongoose.model("Post", postSchema);
+
+module.exports = Post;
