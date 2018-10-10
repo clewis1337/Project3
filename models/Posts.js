@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
-// Define movie schema
+// Define post schema
 var postSchema = new Schema({
   id: {
     type: Number,
