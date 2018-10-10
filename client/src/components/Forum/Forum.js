@@ -6,14 +6,16 @@ const Forum = (props) => (
     <div>
     
     {props.PostData.map(eachPost =>(
-    <div>
+    <div className="postWrapper">
         <div className="AuthorSection">
             {eachPost.author}
-            {eachPost.authorAvatar} 
+            <img src={eachPost.authorAvatar}/>
         </div>
         <div className="ContentSection">
             {eachPost.date}
             {eachPost.content}
+            <br/>
+            {eachPost.link}
         </div>
     </div>
     ))}

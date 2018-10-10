@@ -1,3 +1,12 @@
 .AuthorSection {
-    font-size: 10px
+    font-size: 15px
+}
+
+.postWrapper {
+    border: black 3px solid;
+    margin: 10px;
+}
+
+img {
+    height: 200px;
 }
