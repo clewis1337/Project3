@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-const db = require("../models/Posts");
+const db = require("../db/Posts");
 
 // This file empties the Posts collection and inserts the posts below
 
