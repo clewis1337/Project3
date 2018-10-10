@@ -1,6 +1,6 @@
 import Posts from "../utils/Posts.json"
 import React, { Component } from "react";
-import Post from "../components/Post";
+import Forum from "../components/Forum";
 
 
 class Topic extends Component {
@@ -18,7 +18,7 @@ class Topic extends Component {
 
     return (
 
-        <Post 
+        <Forum 
             PostData={Posts}
         />
         // <div>

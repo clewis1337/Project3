@@ -1,9 +1,10 @@
 import React from "react";
-import "./Post.css";
+import "./Forum.css";
 
 //The map will create multiple posts depending on props.tableData
-const Post = (props) => (
+const Forum = (props) => (
     <div>
+    
     {props.PostData.map(eachPost =>(
     <div>
         <div className="AuthorSection">
@@ -18,4 +19,4 @@ const Post = (props) => (
     ))}
     </div>
 );
-export default Post;
+export default Forum;

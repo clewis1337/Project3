@@ -1,1 +1,1 @@
-export { default } from "./Forum3";
+export { default } from "./Forum";
