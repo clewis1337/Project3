@@ -7,7 +7,6 @@ const Forum = (props) => (
     
     {props.PostData.map(eachPost =>(
     <div className="postWrapper">
-
     <div class="container">
     <div class="row">
     <div class="col-lg-6">
@@ -19,10 +18,9 @@ const Forum = (props) => (
     
         <div class="col-lg-6">
         <div className="ContentSection">
-            {eachPost.date}
-            {eachPost.content}
-            <br/>
-            {eachPost.link}
+           <div className="date"> Date:{eachPost.date}</div>
+            <div className="comments">Comments:{eachPost.content}</div>
+           <div className="link">Lesson Plan Link:<a href="default.asp" target="_blank">{eachPost.link}</a></div>
         </div>
         </div>
     </div>
