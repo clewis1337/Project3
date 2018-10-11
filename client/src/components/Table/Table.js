@@ -31,7 +31,7 @@ const Table = () => (
 </div>
 
 <div class="grade7">
-<a href="/grade7">
+<a href="/topic/id/:id">
 <img id="cover" src="/images/books/7thGrade.jpg" /></a>
 </div>
 
