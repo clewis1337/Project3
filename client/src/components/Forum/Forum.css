@@ -4,21 +4,22 @@
 
 .postWrapper {
     box-shadow: 3px 3px orange, -1em 0 .4em olive;
-    margin: 10px;
+    /* margin: 10px; */
     margin-top: 100px;
     margin-bottom: 50px;
-    padding: 40px;
-    margin-right: 150px;
-    margin-left: 150px;
+    /* padding: 40px; */
+    margin-right: 50px;
+    margin-left: 50px;
     background-image: url("/images/orange.png");
     background-repeat: no-repeat;
     background-size: cover;
+
     
 }
 
 img {
     height: 200px;
-    margin-top: 10px;
+    margin-top: 30px;
     align-content: center;
     margin-left: 100px;
     
@@ -40,7 +41,7 @@ img {
     font-style: normal;
     box-sizing: border-box;
     width: 500px;
-    height: 300px;  
+    height: 200px;  
     border: 5px solid grey;
     padding: 5px;
     background-color:gold;
@@ -56,11 +57,13 @@ img {
     border: 5px solid grey;
     padding: 5px;
     background-color: gold;
+    margin-top: 10px;
 }
-
 
     .rating {
         float:left;
+      
+       
     }
     
     /* :not(:checked) is a filter, so that browsers that don’t support :checked don’t 
@@ -113,5 +116,6 @@ img {
         position:relative;
         top:2px;
         left:2px;
+      
     }
 
