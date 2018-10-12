@@ -6,7 +6,9 @@
         "author": "Craig",
         "authorAvatar": "https://upload.wikimedia.org/wikipedia/en/thumb/4/47/Spongebob-squarepants.svg/220px-Spongebob-squarepants.svg.png",
         "authorLevel": "noob",
-        "content": "Here is a lesson plan for 3rd graders.  It's fun ^^"
+        "content": "Here is a lesson plan for 3rd graders.  It's fun ^^",
+        "link": "wwww.GoogleDriveLink"
+
     },
     {
         "_id": 2,
@@ -15,7 +17,8 @@
         "author": "Kayla",
         "authorAvatar": "https://vignette.wikia.nocookie.net/spongebob/images/a/a0/Sandy_Cheeks.svg/revision/latest/scale-to-width-down/270?cb=20100920201409",
         "authorLevel": "noob",
-        "content": "Here is a lesson plan for 2nd graders!  Yay."
+        "content": "Here is a lesson plan for 2nd graders!  Yay.",
+        "link": "wwww.GoogleDriveLink"
     },
     {
         "_id": 3,
@@ -24,7 +27,8 @@
         "author": "Kristian",
         "authorAvatar": "https://upload.wikimedia.org/wikipedia/en/thumb/7/7e/Patrick_Star.png/220px-Patrick_Star.png",
         "authorLevel": "master",
-        "content": "Here is a lesson plan for 6th graders.  It's okay"
+        "content": "Here is a lesson plan for 6th graders.  It's okay",
+        "link": "wwww.GoogleDriveLink"
     },    
     {
         "_id": 4,
@@ -33,6 +37,7 @@
         "author": "Ericka",
         "authorAvatar": "https://upload.wikimedia.org/wikipedia/en/a/ac/Squidward.png",
         "authorLevel": "noob",
-        "content": "Here is a lesson plan for HIGH SHCHOOL."
+        "content": "Here is a lesson plan for HIGH SHCHOOL.",
+        "link": "wwww.GoogleDriveLink"
     }
 ]
