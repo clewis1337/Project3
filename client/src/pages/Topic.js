@@ -1,6 +1,7 @@
 import Posts from "../utils/Posts.json"
 import React, { Component } from "react";
 import Forum from "../components/Forum";
+import API from "../utils/API";
 
 
 class Topic extends Component {
