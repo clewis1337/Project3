@@ -23,15 +23,13 @@ class Topic extends Component {
 
     return (
 <div>
+<Forum 
 
-     <Modal></Modal>  
-     <Dashboard></Dashboard>
-        <Forum 
-
-            PostData={Posts}
-      />
-
+PostData={Posts}
+/>
     
+     
+   
 
      
         </div>
