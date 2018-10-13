@@ -3,13 +3,13 @@ const Schema = mongoose.Schema;
 
 // Define post schema
 var postSchema = new Schema({
-  topicID: {
-    type: Number,
-    default: ''
+     topicID: {
+        type: Number,
+        default: ''
     },
     date: {
-    type: Date,
-    default: Date.now(),
+        type: Date,
+        default: Date.now(),
     },
     author: {
         type: String,
