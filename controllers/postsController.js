@@ -1,10 +1,10 @@
-const db = require("../db/Posts");
+const db = require("../db");
 
-// Defining methods for the booksController
+// Defining methods for the postsController
 module.exports = {
   findAll: function(req, res) {
     db.Post
-      .find(req.query)
+      .find(req.body)
       .sort({ date: -1 })
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));

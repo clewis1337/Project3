@@ -7,11 +7,11 @@
   
 }
 
-.link{
+/* .linklink{
     text-align: center;
     margin-top: 35px;
     margin-bottom: 15px;
-}
+} */
 
 .img{
    height:250px;
@@ -19,10 +19,11 @@
 }
 
 #cover{
-    height: 320px;
-    width:300px;
+    height: 200px;
+    width:200px;
     box-shadow: 3px 3px orange, -1em 0 .4em olive;
     margin-top: 20px;
+    border-radius: 50%;
     
 }
 

@@ -22,6 +22,19 @@ const Navbar = props => (
             Home
           </Link>
         </li>
+
+         <li className="nav-item">
+          <Link
+            to="/"
+            className={
+              window.location.pathname === "/topic/id/:id"
+                ? "nav-link active"
+                : "nav-link"
+            }
+          >
+            Forum
+          </Link>
+        </li>
         <li className="nav-item">
           <Link
             to="/"

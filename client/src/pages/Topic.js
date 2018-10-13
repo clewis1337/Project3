@@ -1,6 +1,8 @@
 import Posts from "../utils/Posts.json"
 import React, { Component } from "react";
-import Post from "../components/Post";
+import Forum from "../components/Forum";
+import API from "../utils/API";
+import Form from "../components/Form";
 
 
 class Topic extends Component {
@@ -17,17 +19,19 @@ class Topic extends Component {
     render(){
 
     return (
-
-        <Post 
+<div>
+        <Forum 
             PostData={Posts}
-        />
-        // <div>
-        // <h1>Hello!  Here are the posts</h1>
-        // {Posts.map(post => (
-        //    <div>
-        //         {post.date} {post.author} {post.content}
-        //    </div>))}
-        // </div>
+      />
+        {/* // // <div>
+        // // <h1>Hello!  Here are the posts</h1>
+        // // {Posts.map(post => (
+        // //    <div>
+        // //         {post.date} {post.author} {post.content}
+        // //   </div>))}
+        // // </div> */}
+        <Form></Form>
+        </div>
     )
     }
 };
