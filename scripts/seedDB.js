@@ -5,7 +5,7 @@ const db = require("../db/Posts");
 
 mongoose.connect(
   process.env.MONGODB_URI ||
-  "mongodb://localhost/postlist"
+  "mongodb://localhost/samDB"
 );
 
 const postSeed = [

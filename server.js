@@ -24,7 +24,7 @@ var collections = ["posts"];
 // Use mongojs to hook the database to the db variable
 var db = mongojs(databaseUrl, collections);
 // Connect to the Mongo DB
-let MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/postlist";
+let MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/samDB";
 
 //CUSTOM ROUTES
 app.get("/all", function(req, res) {
@@ -49,7 +49,7 @@ mongoose.connect(MONGODB_URI, { useNewUrlParser: true });
 
 // Send every request to the React app
 // Define any API routes before this runs
-app.get("*", function(req, res) {
+app.get("/", function(req, res) {
   res.sendFile(path.join(__dirname, "./client/build/index.html"));
 });
 
