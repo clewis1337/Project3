@@ -30,6 +30,6 @@ var postSchema = new Schema({
 });
 
 // Export Mongoose model
-const Post = mongoose.model("Post", postSchema);
+const Posts = mongoose.model("Post", postSchema);
 
-module.exports = Post;
+module.exports = Posts;

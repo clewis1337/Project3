@@ -13,7 +13,6 @@
     background-image: url("/images/orange.png");
     background-repeat: no-repeat;
     background-size: cover;
-
     
 }
 
@@ -63,7 +62,7 @@ img {
     .rating {
         float:left;
       
-       
+
     }
     
     /* :not(:checked) is a filter, so that browsers that don’t support :checked don’t 
