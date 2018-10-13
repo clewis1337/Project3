@@ -19,7 +19,7 @@ if (process.env.NODE_ENV === "production") {
 app.use(routes);
 
 // Connect to the Mongo DB
-let MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/postlist";
+let MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/samDB";
 
 // Set mongoose to leverage built in JavaScript ES6 Promises
 // Connect to the Mongo DB
@@ -28,7 +28,7 @@ mongoose.connect(MONGODB_URI, { useNewUrlParser: true });
 
 // Send every request to the React app
 // Define any API routes before this runs
-app.get("*", function(req, res) {
+app.get("/", function(req, res) {
   res.sendFile(path.join(__dirname, "./client/build/index.html"));
 });
 
