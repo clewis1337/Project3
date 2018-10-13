@@ -24,7 +24,7 @@ var collections = ["posts"];
 // Use mongojs to hook the database to the db variable
 var db = mongojs(databaseUrl, collections);
 // Connect to the Mongo DB
-let MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/samDB";
+let MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/postlist";
 
 //CUSTOM ROUTES
 app.get("/all", function(req, res) {
@@ -41,6 +41,23 @@ app.get("/all", function(req, res) {
     }
   });
 });
+
+app.post("/submit", function(req, res) {
+  console.log(req.body);
+  // Insert the note into the notes collection
+  db.posts.insert(req.body, function(error, saved) {
+    // Log any errors
+    if (error) {
+      console.log(error);
+    }
+    else {
+      // Otherwise, send the note back to the browser
+      // This will fire off the success function of the ajax request
+      console.log(saved);
+      res.send(saved);
+    }
+  });
+ });
 //END CUSTOM ROUTES
 // Set mongoose to leverage built in JavaScript ES6 Promises
 // Connect to the Mongo DB

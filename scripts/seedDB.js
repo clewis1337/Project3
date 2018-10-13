@@ -5,12 +5,11 @@ const db = require("../db/Posts");
 
 mongoose.connect(
   process.env.MONGODB_URI ||
-  "mongodb://localhost/samDB"
+  "mongodb://localhost/postlist"
 );
 
 const postSeed = [
   {
-    id: "",
     topicID: "",
     author: "",
     authorAvatar: "",

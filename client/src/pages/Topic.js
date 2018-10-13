@@ -3,6 +3,8 @@ import React, { Component } from "react";
 import Forum from "../components/Forum";
 import API from "../utils/API";
 import Form from "../components/Form";
+import Modal from "../components/Modal";
+import Dashboard from "../components/Dashboard";
 
 
 class Topic extends Component {
