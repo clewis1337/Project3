@@ -1,6 +1,7 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
+var mongojs = require("mongojs");
 const routes = require("./routes");
 const path = require("path");
 const app = express();
@@ -16,11 +17,31 @@ if (process.env.NODE_ENV === "production") {
 }
 
 // Add routes, both API and view
-app.use(routes);
+// app.use(routes);
+var databaseUrl = "postlist";
+var collections = ["posts"];
 
+// Use mongojs to hook the database to the db variable
+var db = mongojs(databaseUrl, collections);
 // Connect to the Mongo DB
 let MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/postlist";
 
+//CUSTOM ROUTES
+app.get("/all", function(req, res) {
+  // Query: In our database, go to the animals collection, then "find" everything
+  db.posts.find({}, function(error, found) {
+    // Log any errors if the server encounters one
+    if (error) {
+      console.log(error);
+    }
+    // Otherwise, send the result of this query to the browser
+    else {
+      console.log(found);
+      res.json(found);
+    }
+  });
+});
+//END CUSTOM ROUTES
 // Set mongoose to leverage built in JavaScript ES6 Promises
 // Connect to the Mongo DB
 mongoose.Promise = Promise;
