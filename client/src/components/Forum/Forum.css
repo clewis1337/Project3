@@ -118,3 +118,15 @@ img {
       
     }
 
+.button{
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 8px;
+    float: right;
+    margin-top: 220px;
+    margin-right: 40px;
+}
