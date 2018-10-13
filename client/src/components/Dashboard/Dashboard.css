@@ -25,3 +25,6 @@
     display: none;
   }
 
+  .button{
+    flex-grow: inherit;
+  }
