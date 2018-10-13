@@ -22,6 +22,7 @@
     "mongoose": "^5.3.2",
     "morgan": "^1.9.1",
     "react-emotion": "^9.2.12",
+    "react-modal": "^3.6.1",
     "react-router-dom": "^4.3.1"
   }
 }
