@@ -8,8 +8,8 @@
     margin-top: 100px;
     margin-bottom: 50px;
     /* padding: 40px; */
-    margin-right: 50px;
-    margin-left: 50px;
+    margin-right: 200px;
+    margin-left: 200px;
     background-image: url("/images/orange.png");
     background-repeat: no-repeat;
     background-size: cover;
@@ -118,15 +118,3 @@ img {
       
     }
 
-.button{
-    background-color: #4CAF50; /* Green */
-    border: none;
-    color: white;
-    padding: 20px;
-    text-align: center;
-    cursor: pointer;
-    border-radius: 8px;
-    float: right;
-    margin-top: 220px;
-    margin-right: 40px;
-}

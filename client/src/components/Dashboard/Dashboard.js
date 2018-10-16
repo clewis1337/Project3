@@ -17,15 +17,16 @@ class Dashboard extends Component {
 
   render() {
     return (
-      <main>
-        <Modal show={this.state.show} handleClose={this.hideModal}>
-          <p>Modal</p>
-          <p>Data</p>
-        </Modal>
-        <button type="button" onClick={this.showModal}>
-          Post
+      <div>
+       <button type="button" onClick={this.showModal}>
+         Post
         </button>
-      </main>
+        <Modal show={this.state.show} handleClose={this.hideModal}>
+          
+        </Modal>
+      </div>  
+        
+      
     );
   }
 }

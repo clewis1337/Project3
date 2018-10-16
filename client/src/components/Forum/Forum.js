@@ -1,6 +1,6 @@
 import React from "react";
 import "./Forum.css";
-
+import Dashboard from "../Dashboard";
 //The map will create multiple posts depending on props.tableData
 const Forum = (props) => (
     <div>
@@ -31,11 +31,13 @@ const Forum = (props) => (
     <input type="radio" id="star1" name="rating" value="1" /><label for="star1" title="Sucks big time">1 star</label>
 </fieldset></div>
 
+
         </div>
         </div>
 
          <div class="col-lg-4">
-         {/* <button class="button">Reply</button> */}
+    
+      
          <div className="form">
 
          </div>
