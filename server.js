@@ -58,6 +58,21 @@ app.get("/topicID/:id", function(req, res) { //Find posts by topicID
   });
 });
 
+app.get("/test/", function(req, res) { //Find posts by topicID
+  // Query: In our database, go to the animals collection, then "find" everything
+  db.posts.find({_id: '5bc24ab89d8b3635c88aa700'}, function(error, found) {
+    // console.log("params", req.params.id)
+    if (error) {
+      console.log(error);
+    }
+    // Otherwise, send the result of this query to the browser
+    else {
+      console.log(found);
+      res.json(found);
+    }
+  });
+});
+
 app.post("/submit", function(req, res) {
   console.log(req.body);
   // Insert the note into the notes collection
@@ -73,7 +88,34 @@ app.post("/submit", function(req, res) {
       res.send(saved);
     }
   });
- });
+});
+
+app.post("/delete/:id", function(req, res) {
+  console.log(req.param.id);
+  db.posts.remove( {"_id": mongojs.ObjectId(req.params.id)}, function(error, deleted) {
+    // Log any errors
+    if (error) {
+      console.log(error);
+    }
+    else {
+      // Otherwise, send the note back to the browser
+      res.send(deleted);
+    }
+  });
+});
+
+app.post("/update/:id", function(req, res) {
+  db.posts.update( {"_id": mongojs.ObjectId(req.params.id)}, {content: req.body.content, link: req.body.link}, function(error, edited) {
+    // Log any errors
+    if (error) {
+      console.log(error);
+    }
+    else {
+      // Otherwise, send the note back to the browser
+      res.send(edited);
+    }
+  });
+});
 //END CUSTOM ROUTES
 
 

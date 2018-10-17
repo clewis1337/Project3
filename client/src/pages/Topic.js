@@ -6,7 +6,10 @@ import Modal from "../components/Modal";
 import Dashboard from "../components/Dashboard";
 import Button from "../components/Button";
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 50dee90669136f9372c6e92ec6155fbc54a9b7da
 
 class Topic extends Component {
     state = { //Start as empty, need to query database to get posts about topic
@@ -20,19 +23,39 @@ class Topic extends Component {
         // })
         console.log(this.props.match);
         // axios.get(`/topicID/${this.props.match.params.id}`)
-        // .then(res => {
-        // this.setState({ Posts: res });
+        // .then((res) => {
+        //     this.setState({Posts: res})
         //  });
 
         fetch(`/topicID/${this.props.match.params.id}`) //Ajax call getting all posts
+<<<<<<< HEAD
             .then(res => res.json())
             .then((result) => {
                 this.setState({ Posts: result })
             });
         // console.log(this.state.Posts)
         // console.log(document.URL)
+=======
+        .then(res => res.json())
+        .then((result) => {
+            this.setState({Posts: result})
+        }).catch(error => console.error('Error:', error));
+        // console.log(this.state.Posts)
+        // console.log(document.URL)
+      }
+    
+    deletePost = () =>{
+        // fetch(url + '/' + item, {
+        //     method: 'delete'
+        //   }).then(response =>
+        //     response.json().then(json => {
+        //       return json;
+        //     })
+
+>>>>>>> 50dee90669136f9372c6e92ec6155fbc54a9b7da
     }
 
+<<<<<<< HEAD
     deletePost = () => {
 
     }
@@ -47,6 +70,18 @@ class Topic extends Component {
 
             </div>
         )
+=======
+    return (
+        <div>
+            <Forum 
+              PostData={this.state.Posts}
+              
+            />
+
+  
+        </div>
+    )
+>>>>>>> 50dee90669136f9372c6e92ec6155fbc54a9b7da
     }
 };
 
