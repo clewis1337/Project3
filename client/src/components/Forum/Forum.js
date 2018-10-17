@@ -36,6 +36,9 @@ const Forum = (props) => (
         </div>
 
          <div class="col-lg-4">
+         <button>Edit</button>
+         
+         <button>Delete</button>
     
       
          <div className="form">
