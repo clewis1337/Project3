@@ -2,15 +2,10 @@
 import React, { Component } from "react";
 import Forum from "../components/Forum";
 import API from "../utils/API";
-<<<<<<< HEAD
-import Form from "../components/Form";
-import axios from 'axios';
-=======
 import Modal from "../components/Modal";
 import Dashboard   from "../components/Dashboard";
 import Button from "../components/Button";
-
->>>>>>> 4d69241592ed2ef5d90e4ff5ead4134804beed8e
+import axios from "axios";
 
 
 class Topic extends Component {
@@ -24,45 +19,37 @@ class Topic extends Component {
         // })
         console.log(this.props.match);
         // axios.get(`/topicID/${this.props.match.params.id}`)
-        // .then(res => {
-        // this.setState({ Posts: res });
+        // .then((res) => {
+        //     this.setState({Posts: res})
         //  });
 
-        fetch(`/topicID/2`) //Ajax call getting all posts
+        fetch(`/topicID/${this.props.match.params.id}`) //Ajax call getting all posts
         .then(res => res.json())
         .then((result) => {
             this.setState({Posts: result})
-        });
+        }).catch(error => console.error('Error:', error));
         // console.log(this.state.Posts)
         // console.log(document.URL)
       }
     
     deletePost = () =>{
+        // fetch(url + '/' + item, {
+        //     method: 'delete'
+        //   }).then(response =>
+        //     response.json().then(json => {
+        //       return json;
+        //     })
 
     }
     render(){
 
     return (
-<<<<<<< HEAD
         <div>
             <Forum 
               PostData={this.state.Posts}
               
             />
 
-        <Form></Form>
-=======
-<div>
-<Forum 
-
-PostData={Posts}
-/>
-    
-     
-   
-
-     
->>>>>>> 4d69241592ed2ef5d90e4ff5ead4134804beed8e
         </div>
     )
     }
