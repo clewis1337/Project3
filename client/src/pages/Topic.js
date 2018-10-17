@@ -2,8 +2,15 @@
 import React, { Component } from "react";
 import Forum from "../components/Forum";
 import API from "../utils/API";
+<<<<<<< HEAD
 import Form from "../components/Form";
 import axios from 'axios';
+=======
+import Modal from "../components/Modal";
+import Dashboard   from "../components/Dashboard";
+import Button from "../components/Button";
+
+>>>>>>> 4d69241592ed2ef5d90e4ff5ead4134804beed8e
 
 
 class Topic extends Component {
@@ -36,6 +43,7 @@ class Topic extends Component {
     render(){
 
     return (
+<<<<<<< HEAD
         <div>
             <Forum 
               PostData={this.state.Posts}
@@ -43,6 +51,18 @@ class Topic extends Component {
             />
 
         <Form></Form>
+=======
+<div>
+<Forum 
+
+PostData={Posts}
+/>
+    
+     
+   
+
+     
+>>>>>>> 4d69241592ed2ef5d90e4ff5ead4134804beed8e
         </div>
     )
     }
