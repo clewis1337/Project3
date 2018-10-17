@@ -23,7 +23,7 @@ var collections = ["posts"];
 
 // Use mongojs to hook the database to the db variable
 var db = mongojs(databaseUrl, collections);
-var user = mongojs("postlist", "users")
+// var user = mongojs("postlist", "users")
 // Connect to the Mongo DB
 let MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/postlist";
 

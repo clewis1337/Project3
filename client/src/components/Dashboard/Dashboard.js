@@ -18,8 +18,8 @@ class Dashboard extends Component {
   render() {
     return (
       <div>
-       <button type="button" onClick={this.showModal}>
-         Post
+       <button className="button5" type="button" onClick={this.showModal}>
+         Create Post
         </button>
         <Modal show={this.state.show} handleClose={this.hideModal}>
           

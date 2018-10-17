@@ -11,8 +11,7 @@ const Modal = ({ handleClose, show, children }) => {
       <section className="modal-main">
         {children}
 
-        
-        <button onClick={handleClose}>close</button>
+      <button className="cButton" onClick={handleClose}>X</button>
       <form>
         <div className="form">
       <label for="fname">User Name:</label>
@@ -20,11 +19,12 @@ const Modal = ({ handleClose, show, children }) => {
       <label for="fname">Image:</label>
       <input type="text" id="fname" name="fname"></input>
       <label for="fname">Comments:</label>
-      <input type="text" id="fname" name="fname"></input>
+      <input type="text" id="pname" name="fname"></input>
       <label for="fname">Link:</label>
       <input type="text" id="fname" name="fname"></input>
       </div>
       </form>
+      <button className="mButton" onClick={handleClose}>Submit</button>
       </section>
     </div>
   );

@@ -20,6 +20,10 @@
     padding:0;
     margin-top: 150px;
   }
+
+  .modal.display-block {
+    width: 100%;
+  }
   
   .display-block {
     display: block;
@@ -40,5 +44,46 @@
   margin-right: 100px;
   margin-bottom: 50px;
   margin-top: 50px;
+}
+
+.cButton {
+  background-color: wheat;
+  border: none;
+  color:black;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 12px;
+ margin-bottom: -23px;
+ margin-left: 85%;
+ }
+
+.mButton {
+  background-color: wheat;
+  border: none;
+  color:black;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 12px;
+ margin-bottom: 50px;
+ }
+ 
+ .mButton{
+  margin-left: 85%;
+ 
+ 
+ }
+
+#pname {
+  height: 125px;
 }
 
