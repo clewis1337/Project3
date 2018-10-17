@@ -6,10 +6,6 @@ import Modal from "../components/Modal";
 import Dashboard from "../components/Dashboard";
 import Button from "../components/Button";
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 50dee90669136f9372c6e92ec6155fbc54a9b7da
 
 class Topic extends Component {
     state = { //Start as empty, need to query database to get posts about topic
@@ -28,14 +24,6 @@ class Topic extends Component {
         //  });
 
         fetch(`/topicID/${this.props.match.params.id}`) //Ajax call getting all posts
-<<<<<<< HEAD
-            .then(res => res.json())
-            .then((result) => {
-                this.setState({ Posts: result })
-            });
-        // console.log(this.state.Posts)
-        // console.log(document.URL)
-=======
         .then(res => res.json())
         .then((result) => {
             this.setState({Posts: result})
@@ -52,26 +40,9 @@ class Topic extends Component {
         //       return json;
         //     })
 
->>>>>>> 50dee90669136f9372c6e92ec6155fbc54a9b7da
     }
 
-<<<<<<< HEAD
-    deletePost = () => {
-
-    }
-    render() {
-
-        return (
-            <div>
-                <Forum
-                    PostData={this.state.Posts}
-
-                />
-
-            </div>
-        )
-=======
-    return (
+    render(){ return (
         <div>
             <Forum 
               PostData={this.state.Posts}
@@ -81,8 +52,7 @@ class Topic extends Component {
   
         </div>
     )
->>>>>>> 50dee90669136f9372c6e92ec6155fbc54a9b7da
-    }
+}
 };
 
 export default Topic;
