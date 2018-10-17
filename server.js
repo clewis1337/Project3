@@ -23,6 +23,7 @@ var collections = ["posts"];
 
 // Use mongojs to hook the database to the db variable
 var db = mongojs(databaseUrl, collections);
+var user = mongojs("postlist", "users")
 // Connect to the Mongo DB
 let MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/postlist";
 
@@ -31,6 +32,21 @@ app.get("/all", function(req, res) {
   // Query: In our database, go to the animals collection, then "find" everything
   db.posts.find({}, function(error, found) {
     // Log any errors if the server encounters one
+    if (error) {
+      console.log(error);
+    }
+    // Otherwise, send the result of this query to the browser
+    else {
+      console.log(found);
+      res.json(found);
+    }
+  });
+});
+
+app.get("/topicID/:id", function(req, res) { //Find posts by topicID
+  // Query: In our database, go to the animals collection, then "find" everything
+  db.posts.find({topicID: parseInt(req.params.id)}, function(error, found) {
+    console.log("params", req.params.id)
     if (error) {
       console.log(error);
     }
@@ -59,6 +75,8 @@ app.post("/submit", function(req, res) {
   });
  });
 //END CUSTOM ROUTES
+
+
 // Set mongoose to leverage built in JavaScript ES6 Promises
 // Connect to the Mongo DB
 mongoose.Promise = Promise;

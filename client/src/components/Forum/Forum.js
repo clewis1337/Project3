@@ -4,7 +4,7 @@ import Dashboard from "../Dashboard";
 //The map will create multiple posts depending on props.tableData
 const Forum = (props) => (
     <div>
-    
+    {console.log(props)}
     {props.PostData.map(eachPost =>(
     <div className="postWrapper">
     <div class="container">
@@ -18,9 +18,9 @@ const Forum = (props) => (
     
         <div class="col-lg-4">
         <div className="ContentSection">
-           <div className="date"> Date:{eachPost.date}</div>
-            <div className="comments">Comments:{eachPost.content}</div>
-           <div className="link">Lesson Plan:<a href="default.asp" target="_blank">{eachPost.link}</a></div>
+        <div className="date"> Date:{eachPost.date}</div>
+        <div className="comments">Comments:{eachPost.content}</div>
+        <div className="link">Lesson Plan:<a href="default.asp" target="_blank">{eachPost.link}</a></div>
   
         <div className="rating"><fieldset class="rating">
     <legend>Please rate:</legend>

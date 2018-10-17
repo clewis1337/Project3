@@ -12,7 +12,7 @@ const LessonPlans = props => {
         </Jumbotron>
     
 
-     <Forum />
+      <Forum />
        
       </Container>
     )
