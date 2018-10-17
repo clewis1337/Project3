@@ -10,6 +10,7 @@ import LessonPlans from "./pages/LessonPlans";
 import Forum from "./components/Forum";
 import Dashboard from "./components/Dashboard";
 import Modal from "./components/Modal";
+import Account from "./pages/Account";
 
 
 const App = () => (
@@ -18,8 +19,9 @@ const App = () => (
       <Navbar />
         <Route exact path="/" component={Home} />
         <Route path="/home" component={Home} />
-        <Route path="/lessonplans" component={LessonPlans} />
+        <Route path="/account" component={Account} />
         <Route path="/topic/:id" component={Topic} />
+      
       <Footer />
     </div>
   </Router>
