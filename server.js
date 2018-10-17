@@ -23,6 +23,7 @@ var collections = ["posts"];
 
 // Use mongojs to hook the database to the db variable
 var db = mongojs(databaseUrl, collections);
+var user = mongojs("postlist", "users")
 // Connect to the Mongo DB
 let MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/postlist";
 
@@ -73,6 +74,8 @@ app.post("/submit", function(req, res) {
   });
 });
 //END CUSTOM ROUTES
+
+
 // Set mongoose to leverage built in JavaScript ES6 Promises
 // Connect to the Mongo DB
 mongoose.Promise = Promise;
