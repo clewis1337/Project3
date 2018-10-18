@@ -58,21 +58,6 @@ app.get("/topicID/:id", function(req, res) { //Find posts by topicID
   });
 });
 
-app.get("/test/", function(req, res) { //Find posts by topicID
-  // Query: In our database, go to the animals collection, then "find" everything
-  db.posts.find({_id: '5bc24ab89d8b3635c88aa700'}, function(error, found) {
-    // console.log("params", req.params.id)
-    if (error) {
-      console.log(error);
-    }
-    // Otherwise, send the result of this query to the browser
-    else {
-      console.log(found);
-      res.json(found);
-    }
-  });
-});
-
 app.post("/submit", function(req, res) {
   console.log(req.body);
   // Insert the note into the notes collection

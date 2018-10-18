@@ -32,21 +32,43 @@ class Topic extends Component {
         // console.log(document.URL)
       }
     
-    deletePost = () =>{
+    deletePost = (id) =>{
         // fetch(url + '/' + item, {
         //     method: 'delete'
         //   }).then(response =>
         //     response.json().then(json => {
         //       return json;
         //     })
+        // fetch(`/topicID/${this.props.match.params.id}`) //Ajax call getting all posts
+        // .then(res => res.json())
+        // .then((result) => {
+        //     this.setState({Posts: result})
+        // }).catch(error => console.error('Error:', error));
 
+        fetch(`/delete/${id}`, {
+            method: 'post'
+          }).then(res => res.json())
+            .catch(error => console.error('Error:', error));
+
+    }
+
+    editPost = (id) => {
+    //     fetch('https://api.github.com/gists', {
+    // method: 'post',
+    // body: JSON.stringify(opts)
+    // }).then(function(response) {
+    // return response.json();
+    // }).then(function(data) {
+    // ChromeSamples.log('Created Gist:', data.html_url);
+    // });
     }
 
     render(){ return (
         <div>
             <Forum 
               PostData={this.state.Posts}
-              
+              editPost={this.editPost}
+              deletePost={this.deletePost}
             />
 
   

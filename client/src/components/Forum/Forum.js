@@ -36,8 +36,9 @@ const Forum = (props) => (
         </div>
 
          <div class="col-lg-4">
-    
-      
+        
+         <button onClick={() => props.editPost(props.eachPost._id)}>Edit</button>
+         <button onClick={() => props.deletePost(eachPost._id)}>Delete</button>
          <div className="form">
 
          </div>
