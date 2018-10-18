@@ -17,25 +17,15 @@ if (process.env.NODE_ENV === "production") {
 }
 
 // Add routes, both API and view
-// app.use(routes);
-var databaseUrl = "postlist";
-var collections = ["posts"];
+let MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/postlist"; //Use given database or our local one
+var db = mongojs(MONGODB_URI);  //Connects to postlist database or heroku database
+var posts = db.collection('posts'); //posts collection
+var user = db.collection('users');
 
-// Use mongojs to hook the database to the db variable
-var db = mongojs(databaseUrl, collections);
-// var user = mongojs("postlist", "users")
-// Connect to the Mongo DB
-let MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/postlist";
-
-//CUSTOM ROUTES
-app.get("/all", function(req, res) {
-  // Query: In our database, go to the animals collection, then "find" everything
-  db.posts.find({}, function(error, found) {
-    // Log any errors if the server encounters one
-    if (error) {
-      console.log(error);
-    }
-    // Otherwise, send the result of this query to the browser
+//CUSTOM POSTS ROUTES
+app.get("/all", function(req, res) {  //Return all posts
+  posts.find({}, function(error, found) {
+    if (error) console.log(error);
     else {
       console.log(found);
       res.json(found);
@@ -44,13 +34,9 @@ app.get("/all", function(req, res) {
 });
 
 app.get("/topicID/:id", function(req, res) { //Find posts by topicID
-  // Query: In our database, go to the animals collection, then "find" everything
-  db.posts.find({topicID: parseInt(req.params.id)}, function(error, found) {
+  posts.find({topicID: parseInt(req.params.id)}, function(error, found) {
     console.log("params", req.params.id)
-    if (error) {
-      console.log(error);
-    }
-    // Otherwise, send the result of this query to the browser
+    if (error) console.log(error);
     else {
       console.log(found);
       res.json(found);
@@ -58,60 +44,32 @@ app.get("/topicID/:id", function(req, res) { //Find posts by topicID
   });
 });
 
-app.get("/test/", function(req, res) { //Find posts by topicID
-  // Query: In our database, go to the animals collection, then "find" everything
-  db.posts.find({_id: '5bc24ab89d8b3635c88aa700'}, function(error, found) {
-    // console.log("params", req.params.id)
-    if (error) {
-      console.log(error);
-    }
-    // Otherwise, send the result of this query to the browser
+app.post("/submit", function(req, res) { //Create New Post
+  posts.insert(req.body, function(error, saved) {
+    console.log("reqbody", req.body)
+    if (error) console.log(error);
     else {
-      console.log(found);
-      res.json(found);
-    }
-  });
-});
-
-app.post("/submit", function(req, res) {
-  console.log(req.body);
-  // Insert the note into the notes collection
-  db.posts.insert(req.body, function(error, saved) {
-    // Log any errors
-    if (error) {
-      console.log(error);
-    }
-    else {
-      // Otherwise, send the note back to the browser
-      // This will fire off the success function of the ajax request
-      console.log(saved);
+      console.log("created", saved);
       res.send(saved);
     }
   });
 });
 
-app.post("/delete/:id", function(req, res) {
-  console.log(req.param.id);
-  db.posts.remove( {"_id": mongojs.ObjectId(req.params.id)}, function(error, deleted) {
-    // Log any errors
-    if (error) {
-      console.log(error);
-    }
+app.delete("/delete/:id", function(req, res) { //Delete post by ID
+  posts.remove( {"_id": mongojs.ObjectId(req.params.id)}, function(error, deleted) {
+    if (error) console.log(error);
     else {
-      // Otherwise, send the note back to the browser
+      console.log(deleted)
       res.send(deleted);
     }
   });
 });
 
 app.post("/update/:id", function(req, res) {
-  db.posts.update( {"_id": mongojs.ObjectId(req.params.id)}, {content: req.body.content, link: req.body.link}, function(error, edited) {
-    // Log any errors
-    if (error) {
-      console.log(error);
-    }
+  posts.update( {"_id": mongojs.ObjectId(req.params.id)}, {content: req.body.content, link: req.body.link}, function(error, edited) {
+    if (error) console.log(error);
     else {
-      // Otherwise, send the note back to the browser
+      console.log(edited);
       res.send(edited);
     }
   });
