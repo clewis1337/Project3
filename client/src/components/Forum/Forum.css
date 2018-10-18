@@ -17,9 +17,9 @@
 }
 
 img {
-    height: 200px;
+    height: 100px;
+    max-width: 100%;
     margin-top: 30px;
-    align-content: center;
     margin-left: 100px;
     
 }
@@ -116,5 +116,9 @@ img {
         top:2px;
         left:2px;
       
+    }
+
+    .editButton {
+    
     }
 
