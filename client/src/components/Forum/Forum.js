@@ -36,9 +36,17 @@ const Forum = (props) => (
         </div>
 
          <div class="col-lg-4">
+<<<<<<< HEAD
         
          <button onClick={() => props.editPost(props.eachPost._id)}>Edit</button>
          <button onClick={() => props.deletePost(eachPost._id)}>Delete</button>
+=======
+         <button>Edit</button>
+         
+         <button>Delete</button>
+    
+      
+>>>>>>> 542c56a9a854d5096776647928e5add9e2051633
          <div className="form">
 
          </div>

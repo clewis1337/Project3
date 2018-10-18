@@ -8,7 +8,7 @@ import "../Dashboard/Dashboard.css";
 const Navbar = props => (
   <nav className="navbar navbar-default navbar-fixed-top">
     <Link className="navbar-brand" to="/">
-  ENG Share
+  ENG Share 
     </Link>
     <div>
       <ul className="navbar-nav">
@@ -22,6 +22,19 @@ const Navbar = props => (
             }
           >
             Home
+          </Link>
+        </li>
+
+             <li className="nav-item">
+          <Link
+            to="/"
+            className={
+              window.location.pathname === "/account"
+                ? "nav-link active"
+                : "nav-link"
+            }
+          >
+            Login
           </Link>
         </li>
 

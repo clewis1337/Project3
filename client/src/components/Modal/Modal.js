@@ -18,8 +18,8 @@ const Modal = ({ handleClose, show, children }) => {
       <input type="text" id="fname" name="fname"></input>
       <label for="fname">Image:</label>
       <input type="text" id="fname" name="fname"></input>
-      <label for="fname">Comments:</label>
-      <input type="text" id="pname" name="fname"></input>
+      <label for="fname">Comments: </label>
+      <textarea type="text" id="pname" name="comment[body]"></textarea>
       <label for="fname">Link:</label>
       <input type="text" id="fname" name="fname"></input>
       </div>

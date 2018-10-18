@@ -12,13 +12,12 @@
     position:fixed;
     background: white;
     width: 80%;
-    height: auto;
-    top:200px;
+    height: 90%;
     left:50%;
     transform: translate(-50%,-50%);
     margin:0;
-    padding:0;
-    margin-top: 150px;
+    padding: 1%;
+    margin-top: 100px;
   }
 
   .modal.display-block {
@@ -32,11 +31,19 @@
   .display-none {
     display: none;
   }
+
   input[type=text] {
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
     box-sizing: border-box;
+}
+
+textarea {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
 }
 
 .form{
@@ -50,7 +57,7 @@
   background-color: wheat;
   border: none;
   color:black;
-  padding: 20px;
+  padding: 15px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -59,14 +66,14 @@
   cursor: pointer;
   border-radius: 12px;
  margin-bottom: -23px;
- margin-left: 85%;
+ margin-left: 90%;
  }
 
 .mButton {
   background-color: wheat;
   border: none;
   color:black;
-  padding: 20px;
+  padding: 15px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
