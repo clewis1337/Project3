@@ -1,43 +1,41 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import "./Table.css";
-import { render } from "react-dom";
-import { Card, CardHeader, CardBody, CardFooter, ImageHeader,} from "react-simple-card";
+import { Card } from "react-simple-card";
 
 
 const Table = () => (
   <Card>
-<div container>
-    <div class="cards">
-    <div class="grade3">
+<div className="container">
+    <div className="cards">
+    <div className="grade3">
     <a href="/topic/id/:id">
-    <img id="cover" src="/images/books/3rdGrade.jpg" /></a>
+    <img id="cover" src="/images/books/3rdGrade.jpg" alt=""/></a>
     </div>
 
-    <div class="grade4">
+    <div className="grade4">
     <a href="/topic/id/:id">
-    <img id="cover" src="/images/books/4thGrade.jpg" /></a>
+    <img id="cover" src="/images/books/4thGrade.jpg" alt=""/></a>
     {/* <CardBody>Click for Lesson Plans</CardBody> */}
     </div>
 
-<div class="grade5">
+<div className="grade5">
 <a href="/topic/id/:id">
-<img id="cover" src="/images/books/5thGrade.jpg" /></a>
+<img id="cover" src="/images/books/5thGrade.jpg" alt=""/></a>
 </div>
 
-<div class="grade6">
+<div className="grade6">
 <a href="/topic/id/:id">
-<img id="cover" src="/images/books/6thGrade.jpg" /></a>
+<img id="cover" src="/images/books/6thGrade.jpg" alt=""/></a>
 </div>
 
-<div class="grade7">
+<div className="grade7">
 <a href="/topic/id/:id">
-<img id="cover" src="/images/books/7thGrade.jpg" /></a>
+<img id="cover" src="/images/books/7thGrade.jpg" alt=""/></a>
 </div>
 
-<div class="grade8">
+<div className="grade8">
 <a href="/topic/id/:id">
-<img id="cover" src="/images/books/8thGrade.jpg" /> </a>
+<img id="cover" src="/images/books/8thGrade.jpg" alt=""/> </a>
 </div>
 </div>
 </div>

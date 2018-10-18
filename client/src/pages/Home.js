@@ -1,11 +1,8 @@
 import React, { Component } from "react";
 import Jumbotron from "../components/Jumbotron";
-import Navbar from "../components/Navbar";
-import Posts from "../utils/Posts";
 import Container from "../components/Container";
 import DirectoryTable from "../components/DirectoryTable";
 import Table from "../components/Table";
-import API from "../utils/API";
 
 //Dummy Data For Now, these will be updated from an API later.
 import General from "../utils/General";

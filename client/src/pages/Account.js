@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import Jumbotron from "../components/Jumbotron";
 import Container from "../components/Container";
 import Login from "../components/Login";
@@ -11,7 +11,7 @@ const Account = props => {
           
         </Jumbotron>
     
-<Login></Login>
+        <Login></Login>
    
        
       </Container>
