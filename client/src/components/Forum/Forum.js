@@ -17,9 +17,9 @@ const Forum = (props) => (
           </div>
         <div class="col-lg-4">
            <div className="ContentSection">
-              <div className="date"> Date:{eachPost.date}</div>
-              <div className="content">{eachPost.content}</div>
-              <div className="link">Lesson Plan:<a href="default.asp" target="_blank">{eachPost.link}</a></div>
+              <div className="date" id={eachPost._id + 'date'}> Date:{eachPost.date}</div>
+              <div className="content" id={eachPost._id + 'content'} contenteditable="true">{eachPost.content}</div>
+              <div className="link" id={eachPost._id + 'link'} contenteditable="true">Lesson Plan:<a href="default.asp" target="_blank">{eachPost.link}</a></div>
               <div className="rating"><fieldset class="rating">
                 <legend>Please rate:</legend>
                 <input type="radio" id="star5" name="rating" value="5" /><label for="star5" title="Rocks!">5 stars</label>
@@ -32,7 +32,7 @@ const Forum = (props) => (
             </div>
         </div>
         <div class="col-lg-4" id="editButtons">        
-          <button onClick={() => props.showEdit(eachPost._id)}>Edit</button>
+          <button onClick={() => props.handleEdit(eachPost._id)}>Edit</button>
           <button className={eachPost._id} visibility="hidden" onClick={() => props.editPost(eachPost._id)}>Submit Edit</button>
           <button className={eachPost._id} visibility="hidden" onClick={() => props.editPost(eachPost._id)}>Cancel</button>
           <button onClick={() => props.deletePost(eachPost._id)}>Delete</button>

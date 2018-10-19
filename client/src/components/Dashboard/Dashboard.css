@@ -127,3 +127,7 @@ textarea {
 #pname {
   height: 125px;
 }
+
+.outside {
+  margin-top: 80px;
+}
