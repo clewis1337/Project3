@@ -16,11 +16,15 @@
     
 }
 
+.container {
+    max-width: 100%;
+}
+
 img {
     height: 100px;
     max-width: 100%;
     margin-top: 30px;
-    margin-left: 100px;
+    margin-left: 30px;
     
 }
 
@@ -57,6 +61,14 @@ img {
     padding: 5px;
     background-color: gold;
     margin-top: 10px;
+}
+
+#editButtons {
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: 1px;
 }
 
     .rating {
@@ -116,9 +128,5 @@ img {
         top:2px;
         left:2px;
       
-    }
-
-    .editButton {
-    
     }
 

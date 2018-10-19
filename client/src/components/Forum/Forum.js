@@ -31,7 +31,7 @@ const Forum = (props) => (
               </div>
             </div>
         </div>
-        <div class="col-lg-4">        
+        <div class="col-lg-4" id="editButtons">        
           <button onClick={() => props.showEdit(eachPost._id)}>Edit</button>
           <button className={eachPost._id} visibility="hidden" onClick={() => props.editPost(eachPost._id)}>Submit Edit</button>
           <button className={eachPost._id} visibility="hidden" onClick={() => props.editPost(eachPost._id)}>Cancel</button>
