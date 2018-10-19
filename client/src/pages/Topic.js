@@ -6,12 +6,11 @@ import Dashboard from "../components/Dashboard";
 class Topic extends Component {
     state = { //Start as empty, need to query database to get posts about topic
         Posts: [{ "Content": "No posts loaded" }],
-        editedPost: {
             _id: '',
             content: '',
             link: '',
             date: ''
-        }
+        
     }
 
 
@@ -39,33 +38,33 @@ class Topic extends Component {
         
     }
     editPost = (id) => {
-        fetch('/submit', {
+        console.log("state on edit", this.state)
+        fetch(`/update/${id}`, {
             method: 'POST',
             headers: {"Content-Type": "application/json"},
             body: JSON.stringify({
-              author: this.state.author,
-              authorAvatar: this.state.authorAvatar,
-              topicID: this.state.topicID,
-              date: Date(Date.now()).toString(),
-              content: this.state.content,
-              link: this.state.link
+              date: "Edited:" + Date(Date.now()).toString(),
+              content: document.getElementById(id + 'content').textContent,
+              link: document.getElementById(id + 'link').textContent
             })
           }).then(res => res.json())
             .then((res) => {
-                 this.props.getPosts();
+                 this.getPosts();
                 console.log("edited post!")
             })
             .catch(error => console.error('Error:', error));
     }
 
     handleEdit = (id) => {
-        this.setState({editedPost: {
-            _id: id,
-            content: document.getElementById(id + 'content').textContent,
-            link: document.getElementById(id + 'link').textContent,
-            date: 'Edited: ' + Date(Date.now()).toString()
-        }})
-        // .then(() => this.editPost(id));
+        console.log(typeof document.getElementById(id + 'content').textContent)
+        // this.setState({editedPost: {
+        //     _id: id,
+        //     content: document.getElementById(id + 'content').textContent,
+        //     link: document.getElementById(id + 'link').textContent,
+        //     date: 'Edited: ' + Date(Date.now()).toString()
+        // }}, this.editPost(id))
+        this.editPost(id)
+        
     }
 
     render(){ return (

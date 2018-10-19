@@ -35,10 +35,8 @@ app.get("/all", function(req, res) {  //Return all posts
 
 app.get("/topicID/:id", function(req, res) { //Find posts by topicID
   posts.find({topicID: parseInt(req.params.id)}, function(error, found) {
-    console.log("params", req.params.id)
     if (error) console.log(error);
     else {
-      console.log(found);
       res.json(found);
     }
   });
@@ -55,22 +53,23 @@ app.post("/submit", function(req, res) { //Create New Post
   });
 });
 
+app.post("/update/:id", function(req, res) { //Edit post's date/content/link
+  posts.findAndModify({ query:  {"_id": mongojs.ObjectId(req.params.id)}, 
+                        update: { $set: {date: req.body.date, content: req.body.content, link: req.body.link}}}, function(error, edited) {
+    if (error) console.log(error);
+    else {
+      console.log(edited);
+      res.send(edited);
+    }
+  });
+});
+
 app.delete("/delete/:id", function(req, res) { //Delete post by ID
   posts.remove( {"_id": mongojs.ObjectId(req.params.id)}, function(error, deleted) {
     if (error) console.log(error);
     else {
       console.log(deleted)
       res.send(deleted);
-    }
-  });
-});
-
-app.post("/update/:id", function(req, res) {
-  posts.update( {"_id": mongojs.ObjectId(req.params.id)}, {content: req.body.content, link: req.body.link}, function(error, edited) {
-    if (error) console.log(error);
-    else {
-      console.log(edited);
-      res.send(edited);
     }
   });
 });
