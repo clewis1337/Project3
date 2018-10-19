@@ -76,9 +76,10 @@ textarea {
   padding: 12px 20px;
   margin: 8px 0;
   box-sizing: border-box;
+  resize: none;
 }
 
-.form{
+.form {
   margin-left:100px;
   margin-right: 100px;
   margin-bottom: 50px;
@@ -125,4 +126,3 @@ textarea {
 #pname {
   height: 125px;
 }
-

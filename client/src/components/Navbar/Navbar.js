@@ -59,8 +59,8 @@ const Navbar = props => (
                 : "nav-link"
             }
           >
-          <Dashboard></Dashboard>
           </Link>
+          <Dashboard></Dashboard>
         </li>
       </ul>
     </div>
