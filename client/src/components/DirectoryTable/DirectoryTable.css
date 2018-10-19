@@ -39,15 +39,18 @@ table, td, th {
 
 table {
     border-collapse: collapse;
-    width: 100%;
+    width: 75%;
 }
 
 th {
-    height: 100px;
-    width:100px;
+    height: 50px;
+    width:50px;
 }
 
 .table1{
-    margin-left:200px;
-    margin-right:200px;
+    margin-left:150px;
+    margin-right:100px;
+    align-content: center;
+    margin-bottom: 100px;
+    margin-top: 60px;
 }

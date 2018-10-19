@@ -8,22 +8,21 @@ const DirectoryTable = () => (
         </header>
         <table className="table1">
 <tr>
-    <th>Grade Level</th>
-    <th>Subject</th>
+    <th></th>
     <th>Topic</th>
+    <th>Link</th>
+    <th>Topic Count</th>
+    <th>Post Count</th>
 </tr>
 
 <tr>
     <td>1</td>
     <td>2</td>
-    <td>3</td>
+    <td>2</td>
+    <td>2</td>
+    <td>2</td>
     </tr>
 
-    <tr>
-    <td>4</td>
-    <td>5</td>
-    <td>6</td>
-    </tr>
 </table>
 </div>
 
