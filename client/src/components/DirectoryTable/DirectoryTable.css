@@ -19,9 +19,7 @@ table {
     flex: 1
 }
 
-tr {
-    display: flex
-}
+
 
 h4{
 
@@ -33,4 +31,23 @@ h4{
   font-family: 'Delius Swash Caps', cursive;
 
    
+}
+
+table, td, th {
+    border: 1px solid black;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th {
+    height: 100px;
+    width:100px;
+}
+
+.table1{
+    margin-left:200px;
+    margin-right:200px;
 }

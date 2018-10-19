@@ -5,6 +5,8 @@ import Topic from "./pages/Topic";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Account from "./pages/Account";
+import Directory from "./pages/Directory";
+
 
 
 const App = () => (
@@ -15,6 +17,8 @@ const App = () => (
         <Route path="/home" component={Home} />
         <Route path="/account" component={Account} />
         <Route path="/topic/:id" component={Topic} />
+        <Route path="/directory/:id" component={Directory} />
+        
       
       <Footer />
     </div>
