@@ -1,12 +1,25 @@
 nav.navbar.navbar-default {
   margin-bottom: 0;
-  padding:0;
+  padding:0.6%;
   box-shadow: 0 3px 6px #FF9933, 0 3px 6px #999
+}
+
+.navbar-default {
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+}
+
+.navbar-nav {
+  display: flex;
+  flex: 1;
+  flex-direction: row;
 }
 
 .navbar li{
 
   display: inline-block;
   font-size: 20px;
-  padding: 20px;
+  padding: 14px;
+  margin-bottom: 10px;
 }

@@ -2,26 +2,10 @@
     font-size: 35px
 }
 
-table {
-    margin-left:auto; 
-    margin-right:auto;
-    margin-top: 5px;
-    margin-bottom: 5px;
-    border: 2px solid red;
-}
 
-.Topic {
-    font-size: 20px;
-    flex: 4
-}
 
-.countStuff {
-    flex: 1
-}
 
-tr {
-    display: flex
-}
+
 
 h4{
 
@@ -33,4 +17,36 @@ h4{
   font-family: 'Delius Swash Caps', cursive;
 
    
+}
+
+table, tr {
+    border: 1px solid black;
+ 
+}
+
+table {
+    border-collapse: collapse;
+    width: 75%;
+}
+
+th {
+    height: 50px;
+    width:50px;
+}
+
+.table1{
+    margin-left:150px;
+    margin-right:100px;
+    align-content: center;
+    margin-bottom: 100px;
+    margin-top: 60px;
+}
+
+.header1{
+    text-align: center;
+  
+}
+
+.header2{
+    background-color:lightgrey;
 }

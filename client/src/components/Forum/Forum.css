@@ -1,3 +1,15 @@
+.navbar-default {
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+}
+
+.navbar-nav {
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+}
+
 .AuthorSection {
     font-size: 15px
 }

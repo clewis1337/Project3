@@ -28,7 +28,7 @@ class Home extends Component {
     return (
       <Container>
         <Jumbotron backgroundImage="https://i.imgur.com/qkdpN.jpg" />
-        <DirectoryTable> </DirectoryTable>
+     
     
 
         <Table>

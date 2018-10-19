@@ -10,6 +10,7 @@ const Navbar = props => (
     <Link className="navbar-brand" to="/">
   ENG Share 
     </Link>
+
     <div>
       <ul className="navbar-nav">
         <li className="nav-item">
@@ -23,43 +24,49 @@ const Navbar = props => (
           >
             Home
           </Link>
-        </li>
 
+        </li>
              <li className="nav-item">
           <Link
-            to="/"
+            to="/Account"
             className={
-              window.location.pathname === "/account"
+              window.location.pathname === "/Account" || window.location.pathname === "/Account"
                 ? "nav-link active"
                 : "nav-link"
             }
           >
             Login
           </Link>
-        </li>
 
+        </li>
          <li className="nav-item">
           <Link
-            to="/"
+            to="/directory/:id"
             className={
-              window.location.pathname === "/topic/1"
+              window.location.pathname === "/directory/:id" || window.location.pathname === "/directory/:id"
                 ? "nav-link active"
                 : "nav-link"
             }
           >
-            Forum
+            Topics
           </Link>
+      
+       
         </li>
+
         <li className="nav-item">
           <Link
-            to="/"
+            to="/lessonplans"
             className={
-              window.location.pathname === "/lessonPlans"
+              window.location.pathname === "/topic/:id"
                 ? "nav-link active"
                 : "nav-link"
             }
           >
+          Lesson plans
           </Link>
+
+         
         </li>
       </ul>
     </div>
