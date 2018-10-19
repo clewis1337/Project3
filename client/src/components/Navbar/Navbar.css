@@ -20,5 +20,6 @@ nav.navbar.navbar-default {
 
   display: inline-block;
   font-size: 20px;
-  padding: 10px;
+  padding: 14px;
+  margin-bottom: 10px;
 }
