@@ -10,6 +10,7 @@ import Account from "./pages/Account";
 const App = () => (
   <Router>
     <div>
+       <Navbar />
         <Route exact path="/" component={Home} />
         <Route path="/home" component={Home} />
         <Route path="/account" component={Account} />
