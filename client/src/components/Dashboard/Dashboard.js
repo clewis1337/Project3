@@ -38,31 +38,31 @@ class Dashboard extends Component {
       body: JSON.stringify({
         author: this.state.author,
         authorAvatar: this.state.authorAvatar,
-        topicID: 3,
+        topicID: this.state.topicID,
         date: Date(Date.now()).toString(),
         content: this.state.content,
         link: this.state.link
       })
     }).then(res => res.json())
       .then((res) => {
-          // this.getPosts(); //Refreshes posts after deletion
+           this.props.getPosts();
           console.log("added post!")
       })
       .catch(error => console.error('Error:', error));
   }
   handleChange = (e) => { //on form entry, start setting state to data
-    e.preventDefault();
-    console.log("match", this.props.match);
     const { name, value } = e.target
-    this.setState({
-     [name]: value
-    //  topicID: this.props.match.params.id
-    });
-  }
+    this.setState({[name]: value}, 
+      function() { // called by React after the state is updated
+      this.setState({
+        topicID: parseInt(this.props.location)
+      });
+    })
+    }
 
   render() {
     return (
-      <div>
+      <div className="outside">
        <button className="button5" type="button" onClick={this.showModal}>
          Create Post
         </button>
@@ -93,6 +93,3 @@ class Dashboard extends Component {
 }
 
 export default Dashboard;
-// const container = document.createElement("div");
-// document.getElementById("root").appendChild(container);
-// ReactDOM.render(<Dashboard />, container);
