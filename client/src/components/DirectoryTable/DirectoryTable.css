@@ -2,22 +2,8 @@
     font-size: 35px
 }
 
-table {
-    margin-left:auto; 
-    margin-right:auto;
-    margin-top: 5px;
-    margin-bottom: 5px;
-    border: 2px solid red;
-}
 
-.Topic {
-    font-size: 20px;
-    flex: 4
-}
 
-.countStuff {
-    flex: 1
-}
 
 
 
@@ -33,8 +19,9 @@ h4{
    
 }
 
-table, td, th {
+table, tr {
     border: 1px solid black;
+ 
 }
 
 table {
@@ -53,4 +40,13 @@ th {
     align-content: center;
     margin-bottom: 100px;
     margin-top: 60px;
+}
+
+.header1{
+    text-align: center;
+  
+}
+
+.header2{
+    background-color:lightgrey;
 }
