@@ -28,3 +28,101 @@
   .button5{
 margin-left: 700px;
   }
+
+
+  .modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width:50%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+   
+  }
+  
+  .modal-main {
+    position:fixed;
+    background: white;
+    width: 80%;
+    height: 90%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    margin:0;
+    padding: 1%;
+    margin-top: 100px;
+  }
+
+  .modal.display-block {
+    width: 100%;
+  }
+  
+  .display-block {
+    display: block;
+  }
+  
+  .display-none {
+    display: none;
+  }
+
+  input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+
+textarea {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+
+.form{
+  margin-left:100px;
+  margin-right: 100px;
+  margin-bottom: 50px;
+  margin-top: 50px;
+}
+
+.cButton {
+  background-color: wheat;
+  border: none;
+  color:black;
+  padding: 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 12px;
+ margin-bottom: -23px;
+ margin-left: 90%;
+ }
+
+.mButton {
+  background-color: wheat;
+  border: none;
+  color:black;
+  padding: 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 12px;
+  margin-bottom: 50px;
+ }
+ 
+ .mButton{
+  margin-left: 85%;
+ 
+ 
+ }
+
+#pname {
+  height: 125px;
+}
+

@@ -1,7 +1,7 @@
 // import Posts from "../utils/Posts.json"
 import React, { Component } from "react";
 import Forum from "../components/Forum";
-
+import Navbar from "../components/Navbar"
 
 class Topic extends Component {
     state = { //Start as empty, need to query database to get posts about topic
@@ -45,6 +45,7 @@ class Topic extends Component {
 
     render(){ return (
         <div>
+            <Navbar />
             <Forum 
               PostData={this.state.Posts}
               editPost={this.editPost}
