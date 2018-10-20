@@ -1,26 +1,20 @@
-import React from "react";
+import React, { Component } from "react";
 import "./DirectoryTable.css";
 
 const DirectoryTable = (props) => (
-    // {props.TopicData.map(eachTopic =>(
-
-<div>
+    <div>
+    <div>
         <header className = "click">
             <h4>Topic Directory</h4>
         </header>
         <table className="table1">
-
-
-        <tr>
-     
+        <tr>     
             <th></th>
             <th></th>
             <th className="header1">Getting Started</th>
             <th></th>
-            <th></th>
-          
-        </tr>
-       
+            <th></th>         
+        </tr>      
 <tr>
     <th></th>
     <th>Topic</th>
@@ -28,25 +22,19 @@ const DirectoryTable = (props) => (
     <th>Topic Count</th>
     <th>Post Count</th>
 </tr>
-
-
-{/* <tr>
+ {props.TopicData.map(eachTopic => (
+   <tr>
     <td>{eachTopic.icon}</td>
-    <td>{eachT.Topic}</td>
+    <td>{eachTopic.Topic}</td>
     <td>{eachTopic.link}</td>
     <td>{eachTopic.topicsCount}</td>
     <td>{eachTopic.postsCount}</td>
-    </tr> */}
+ </tr> ))}
 
-</table>
-</div>
-
-
-
-
-    // ))}
-    
-    );
+  </table>
+  </div>
+  </div>
+)
     
 
 export default DirectoryTable;

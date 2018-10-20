@@ -93,6 +93,16 @@ app.post("/newUser", function(req, res) { //Create New Post
     }
   });
 });
+app.post("/updateUser/:id", function(req, res) { //Edit post's date/content/link
+  users.findAndModify({ query:  {"userID": req.params.id}, 
+                        update: { $set: {userName: req.body.userName, userAvatar: req.body.userAvatar}}}, function(error, edited) {
+    if (error) console.log(error);
+    else {
+      console.log(edited);
+      res.send(edited);
+    }
+  });
+});
 
 
 // Set mongoose to leverage built in JavaScript ES6 Promises
