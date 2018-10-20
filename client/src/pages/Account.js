@@ -20,27 +20,27 @@ class Account extends Component {
     userEmail: ""
   }
 
-  getUser = (id) => {
-    console.log("userid before fetch", id)
-    fetch(`/userID/${id}`) //Ajax call getting all posts
+  getUser = (id) => { //Query our DB to see if user exists, then get their data
+    fetch(`/userID/${id}`) //Ajax call getting user by their ID
         .then(res => res.json())
         .then((result) => {
-            console.log("getuser result", result);
+            //Check if the user exists, if they do, get their data
             if(result === undefined || result.length == 0) alert('Welcome!  Please take a moment to fill in your account details');
             else {
               document.getElementById('username').value = result.userName;
               document.getElementById('avatar').value = result.userAvatar;
-              // this.setState({
-              //   userName: result.userName,
-              //   userAvatar: result.userAvatar
-              //   })
+              this.setState({
+                userName: result.userName,
+                userAvatar: result.userAvatar
+                })
               };
-        }).catch(error => console.error('Error:', error));
+        }).then(() => this.updateNavbar())
+        .catch(error => console.error('Error:', error));
   }
-  createUser = (e) => {
+  createUser = (e) => { //Triggered on pressing Update Account Details
     e.preventDefault();
      if(!this.state.isLoggedIn) return alert("Please connect to your google account");
-     fetch('/newUser', {
+     fetch('/newUser', { //Create a new user with their id and the values in the boxes
        method: 'POST',
        headers: {"Content-Type": "application/json"},
        body: JSON.stringify({
@@ -48,33 +48,35 @@ class Account extends Component {
          userName: document.getElementById('username').value,
          userAvatar: document.getElementById('avatar').value
        })
+     }).then(() => {
+       this.setState({userName: document.getElementById('username').value,
+                      userAvatar: document.getElementById('avatar').value}, this.updateNavbar())
      })
        .catch(error => console.error('Error:', error));
      alert("Account details updated!")
   }
-  populateUser = ({ userName, userAvatar }) => {
+  updateNavbar = () => {
+    if(this.state.userName !== ""){
+      console.log("updating navbar")
+      localStorage.setItem('userName', `${this.state.userName}`);
+      localStorage.setItem('userAvatar', `${this.state.userAvatar}`);
+      document.getElementById('loginArea').innerHTML = `Welcome ${this.state.userName}`;
+      document.getElementById('loginArea').setAttribute("avatarLink", `${this.state.userAvatar}`)
+    }
     
   }
-  responseGoogle = (googleUser) => {
-    console.log(googleUser);
-    // googleUser.profileObj: 
-    // email: "clewis1337@gmail.com"
-    // familyName: "Lewis"
-    // givenName: "Craig"
-    // googleId: "114104935058420928283"
-    // imageUrl: "https://lh5.googleusercontent.com/-JJTHEGr8NWY/AAAAAAAAAAI/AAAAAAAABMw/VW8iIUsGm1w/s96-c/photo.jpg"
-    // name: "Craig Lewis"
+  responseGoogle = (googleUser) => { //After Google authentication is complete
     var id_token = googleUser.getAuthResponse().id_token;
     var googleId = googleUser.getId();
-    if(googleUser.profileObj.email !== null) this.setState({isLoggedIn: true, 
-                                                            userID: googleId, 
-                                                            email: googleUser.profileObj.email}, 
-                                                            this.getUser(googleId));
-    console.log({ googleId });
-    console.log({accessToken: id_token});
+    if(googleUser.profileObj.email !== null) 
+        this.setState({isLoggedIn: true, 
+                       userID: googleId, 
+                       email: googleUser.profileObj.email}, this.getUser(googleId)); //Query our DB for user 
+    else alert('Whoops, something went wrong connecting to your google account');                           
     
   }
     render(){
+      // Google Button will disappear when clicked, then the account details will show up.
     return (
       <Container>
         <Jumbotron>

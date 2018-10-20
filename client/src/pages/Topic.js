@@ -6,17 +6,18 @@ import Dashboard from "../components/Dashboard";
 class Topic extends Component {
     state = { //Start as empty, need to query database to get posts about topic
         Posts: [{ "Content": "No posts loaded" }],
-            _id: '',
-            content: '',
-            link: '',
-            date: ''
-        
+        _id: '',
+        content: '',
+        link: '',
+        date: '',
+        author: '',
+        authorAvatar: ''    
     }
 
 
     componentDidMount() { //Runs once to get posts, will be an API call later
         this.getPosts(); //Gets posts from db on pageload 
-      }
+    }
     
     getPosts = () => { //Function to get posts, can be reused with this.getPosts
         fetch(`/topicID/${this.props.match.params.id}`) //Ajax call getting all posts

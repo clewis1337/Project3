@@ -15,7 +15,10 @@ class Dashboard extends Component {
       content: "",
       link: ""          
    };
-
+  componentDidMount() { //Runs to get current user
+    this.setState({author: localStorage.getItem('userName'),
+                       authorAvatar: localStorage.getItem('userAvatar')});
+  }
   showModal = (e) => {
     e.preventDefault();
     this.setState({ show: true });

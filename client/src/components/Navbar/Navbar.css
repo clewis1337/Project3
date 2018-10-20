@@ -16,3 +16,10 @@ nav.navbar.navbar-default {
   font-size: 20px;
   padding: 10px;
 }
+
+.loginArea {
+  position: absolute; /*or fixed*/
+  top: 30px;
+  right: 15px;
+  font-size: 20px;
+}

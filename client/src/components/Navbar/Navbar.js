@@ -64,12 +64,13 @@ const Navbar = props => (
             }
           >
           Lesson plans
-          </Link>
-
-         
+          </Link>         
         </li>
+        
       </ul>
-    </div>
+      <div className="loginArea" id="loginArea">Welcome Guest.  Please Login</div>
+      </div>
+    
   </nav>
 );
 
