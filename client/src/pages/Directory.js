@@ -7,10 +7,23 @@ import DummyData from "../utils/General.json"
 class Directory extends Component {
   state = {
     welcomeArea: [],
-    userTopicArea: []
+    userTopicArea: [{topicTitle: "quickfix"}],
+    directoryID: 0
   }
   componentDidMount(){ //Loa
-    this.setState({directoryID: this.props.match.params.id});
+    let topicsArray = [];
+    fetch(`/all`) //Ajax call getting all posts
+        .then(res => res.json())
+        .then((result) => {
+          console.log(result)
+            result.forEach(post => {
+              console.log("post", post)
+              if((!topicsArray.includes(post.topicTitle)) && (post.topicTitle !== undefined)) 
+                  topicsArray.push({topicTitle: post.topicTitle});              
+            });
+        }).then(() => this.setState({userTopicArea: topicsArray}))
+        .catch(error => console.error('Error:', error));
+        console.log(this.state.userTopicArea)
   }
 
   render(){
@@ -21,7 +34,7 @@ class Directory extends Component {
         </Jumbotron>
 
       <DirectoryTable TopicData={DummyData}></DirectoryTable>
-      {/* <DirectoryTable TopicData={this.stateuserTopicArea}></DirectoryTable> */}
+      <DirectoryTable TopicData={this.state.userTopicArea}></DirectoryTable>
       </Container>
 
   

@@ -27,7 +27,6 @@ app.get("/all", function(req, res) {  //Return all posts
   posts.find({}, function(error, found) {
     if (error) console.log(error);
     else {
-      console.log(found);
       res.json(found);
     }
   });

@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import "./DirectoryTable.css";
 
 const DirectoryTable = (props) => (
-    <div>
+    <div> {console.log("propsdtable", props)}
     <div>
         <header className = "click">
             <h4>Topic Directory</h4>
@@ -22,13 +22,14 @@ const DirectoryTable = (props) => (
     <th>Topic Count</th>
     <th>Post Count</th>
 </tr>
+ {/* This will render a row for each topic */}
  {props.TopicData.map(eachTopic => (
    <tr>
-    <td>{eachTopic.icon}</td>
-    <td>{eachTopic.Topic}</td>
-    <td>{eachTopic.link}</td>
-    <td>{eachTopic.topicsCount}</td>
-    <td>{eachTopic.postsCount}</td>
+    {/* <td>{eachTopic.icon}</td> */}
+    <td>{eachTopic.topicTitle}</td>
+    {/* <td>{eachTopic.link}</td> */}
+    {/* <td>{eachTopic.topicsCount}</td> */}
+    {/* <td>{eachTopic.postsCount}</td> */}
  </tr> ))}
 
   </table>
