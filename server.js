@@ -20,7 +20,7 @@ if (process.env.NODE_ENV === "production") {
 let MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/postlist"; //Use given database or our local one
 var db = mongojs(MONGODB_URI);  //Connects to postlist database or heroku database
 var posts = db.collection('posts'); //posts collection
-var user = db.collection('users');
+var users = db.collection('users');
 
 //CUSTOM POSTS ROUTES
 app.get("/all", function(req, res) {  //Return all posts
@@ -73,7 +73,26 @@ app.delete("/delete/:id", function(req, res) { //Delete post by ID
     }
   });
 });
-//END CUSTOM ROUTES
+//CUSTOM USER ROUTES
+app.get("/userID/:id", function(req, res) { //Find posts by topicID
+  users.findOne({userID: req.params.id}, function(error, found) {
+    if (error) console.log(error);
+    else {
+      console.log(found)
+      res.json(found);
+    }
+  });
+});
+app.post("/newUser", function(req, res) { //Create New Post
+  users.insert(req.body, function(error, saved) {
+    console.log("new user", req.body)
+    if (error) console.log(error);
+    else {
+      console.log("created user", saved);
+      res.send(saved);
+    }
+  });
+});
 
 
 // Set mongoose to leverage built in JavaScript ES6 Promises
