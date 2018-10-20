@@ -40,12 +40,14 @@ class Topic extends Component {
         
     }
     editPost = (id) => {
-        console.log("state on edit", this.state)
+        console.log("value of edit", document.getElementById(id + 'link').textContent)
+        // console.log(document.getElementById(id + 'link').textContent + document.getElementById(id + 'link2').textContent)
+        
         fetch(`/update/${id}`, {
             method: 'POST',
             headers: {"Content-Type": "application/json"},
             body: JSON.stringify({
-              date: "Edited:" + Date(Date.now()).toString(),
+              date: " Edited: " + Date(Date.now()).toString(),
               content: document.getElementById(id + 'content').textContent,
               link: document.getElementById(id + 'link').textContent
             })
@@ -58,7 +60,7 @@ class Topic extends Component {
     }
 
     handleEdit = (id) => {
-        console.log(typeof document.getElementById(id + 'content').textContent)
+        // console.log(typeof document.getElementById(id + 'content').textContent)
         // this.setState({editedPost: {
         //     _id: id,
         //     content: document.getElementById(id + 'content').textContent,
