@@ -71,7 +71,6 @@ class Topic extends Component {
 
     render(){ return (
         <div>
-            <Jumbotron></Jumbotron>
             <Dashboard getPosts={this.getPosts} location={this.props.match.params.id}/>
             <Forum 
               PostData={this.state.Posts}
