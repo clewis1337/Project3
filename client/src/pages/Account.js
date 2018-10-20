@@ -20,6 +20,12 @@ class Account extends Component {
     userEmail: ""
   }
 
+  // componentDidMount() { //Runs once to get posts, will be an API call later
+  //   let userID = localStorage.getItem('userID');
+  //   let userAvatar = localStorage.getItem('userAvatar');
+  //   // console.log("local stuff", userName, userAvatar)
+  //   // if(userName !== "" && userName !== undefined) this.setState({isLoggedIn: true, userName: userName, userAvatar: userAvatar}, this.updateNavbar())
+  // }
   getUser = (id) => { //Query our DB to see if user exists, then get their data
     fetch(`/userID/${id}`) //Ajax call getting user by their ID
         .then(res => res.json())
@@ -27,11 +33,13 @@ class Account extends Component {
             //Check if the user exists, if they do, get their data
             if(result === undefined || result.length == 0) alert('Welcome!  Please take a moment to fill in your account details');
             else {
+              console.log(result)
               document.getElementById('username').value = result.userName;
               document.getElementById('avatar').value = result.userAvatar;
               this.setState({
                 userName: result.userName,
-                userAvatar: result.userAvatar
+                userAvatar: result.userAvatar,
+                userID: result.userID
                 })
               };
         }).then(() => this.updateNavbar())
@@ -40,6 +48,20 @@ class Account extends Component {
   createUser = (e) => { //Triggered on pressing Update Account Details
     e.preventDefault();
      if(!this.state.isLoggedIn) return alert("Please connect to your google account");
+     if(this.state.userName !== ""){//Update user!
+      fetch(`/updateUser/${this.state.userID}`, {
+        method: 'POST',
+        headers: {"Content-Type": "application/json"},
+        body: JSON.stringify({
+          userName: document.getElementById('username').value,
+          userAvatar: document.getElementById('avatar').value
+        })
+      }).then(res => res.json())
+        .then((res) => {
+            console.log("edited user!")
+        })
+        .catch(error => console.error('Error:', error));
+     }
      fetch('/newUser', { //Create a new user with their id and the values in the boxes
        method: 'POST',
        headers: {"Content-Type": "application/json"},
@@ -51,19 +73,20 @@ class Account extends Component {
      }).then(() => {
        this.setState({userName: document.getElementById('username').value,
                       userAvatar: document.getElementById('avatar').value}, this.updateNavbar())
-     })
+       })
        .catch(error => console.error('Error:', error));
      alert("Account details updated!")
   }
   updateNavbar = () => {
     if(this.state.userName !== ""){
-      console.log("updating navbar")
+      
       localStorage.setItem('userName', `${this.state.userName}`);
       localStorage.setItem('userAvatar', `${this.state.userAvatar}`);
+      console.log("updating navbar")
       document.getElementById('loginArea').innerHTML = `Welcome ${this.state.userName}`;
-      document.getElementById('loginArea').setAttribute("avatarLink", `${this.state.userAvatar}`)
+      document.getElementById('username').innerHTML = this.state.userName;
+      document.getElementById('avatar').innerHTML = this.state.userAvatar;
     }
-    
   }
   responseGoogle = (googleUser) => { //After Google authentication is complete
     var id_token = googleUser.getAuthResponse().id_token;
