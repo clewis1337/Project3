@@ -2,11 +2,12 @@
 	background-color: #FF9933;
 	position: relative;
 	width: 100%;
-	margin-top: 70px;
+	margin-top: 20px;
+	padding-bottom: 1%;
 }
 
 h1{
-	margin-top: 84px;
+	margin-top: 83px;
 	text-align: center;
 	font-size: 90px;
 	font-weight: bold;
@@ -21,8 +22,4 @@ h2, h3{
   color:white;
   text-shadow: 2px 2pX grey;
   font-family: 'Delius Swash Caps', cursive;
-}
-
-h3{
-  padding-bottom: 40px;
 }

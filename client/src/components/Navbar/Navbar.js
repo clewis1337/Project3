@@ -60,10 +60,10 @@ const Navbar = props => (
             className={
               window.location.pathname === "/topic/:id"
                 ? "nav-link active"
-                : "nav-link"
+                : "nav-link4"
             }
           >
-          Lesson plans
+          Lesson Plans
           </Link>         
         </li>
         
