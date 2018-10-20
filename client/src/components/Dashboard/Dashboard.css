@@ -26,10 +26,9 @@
   }
 
   .button5{
-margin-left: 600px;
-width:125px;
+    margin-left: 300px;
+    width:125px;
   }
-
 
   .modal {
     position: fixed;
@@ -129,5 +128,9 @@ textarea {
 }
 
 .outside {
-  margin-top: 140px;
+  margin-top: 15px;
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-content: center;
 }

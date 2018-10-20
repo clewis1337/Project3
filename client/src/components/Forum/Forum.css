@@ -17,7 +17,7 @@
 .postWrapper {
     box-shadow: 3px 3px orange, -1em 0 .4em olive;
     margin-top: 20px;
-    margin-bottom: 50px;
+    margin-bottom: 25px;
     margin-right: 200px;
     margin-left: 200px;
     background-image: url("/images/orange.png");
@@ -31,10 +31,22 @@
 }
 
 img {
-    height: 100px;
     max-width: 100%;
     margin-top: 30px;
-    margin-left: 30px;
+    margin-left: 35px;
+
+        /* make a square container */
+        width: 185px;
+        height: 185px;
+    
+        /* fill the container, preserving aspect ratio, and cropping to fit */
+        object-fit: cover;
+    
+        /* center the image vertically and horizontally */
+        background-position: top center;
+    
+        /* round the edges to a circle with border radius 1/2 container size */
+        border-radius: 50%;
     
 }
 
@@ -83,13 +95,12 @@ img {
 
     .rating {
         float:left;
-      
 
     }
     
     /* :not(:checked) is a filter, so that browsers that don’t support :checked don’t 
-       follow these rules. Every browser that supports :checked also supports :not(), so
-       it doesn’t make the test unnecessarily selective */
+    follow these rules. Every browser that supports :checked also supports :not(), so
+    it doesn’t make the test unnecessarily selective */
     .rating:not(:checked) > input {
         position:absolute;
         top:-9999px;

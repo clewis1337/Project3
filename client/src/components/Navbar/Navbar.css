@@ -1,6 +1,7 @@
 nav.navbar.navbar-default {
   display: flex;
   flex: 1;
+  max-height: 80px;
   flex-direction: row;
   text-align: center;
   margin-bottom: 0;

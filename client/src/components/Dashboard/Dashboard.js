@@ -76,10 +76,10 @@ class Dashboard extends Component {
             <button className="cButton" onClick={this.hideModal}>X</button>
             <form>
               <div className="form">
-              <label htmlFor="author" >User Name:</label>
-              <input type="text" id="fname" name="author" onChange={this.handleChange}></input>
-              <label htmlFor="authorAvatar">Image:</label>
-              <input type="text" id="fname" name="authorAvatar" onChange={this.handleChange}></input>
+              {/* <label htmlFor="author" >User Name:</label> */}
+              {/* <input type="text" id="fname" name="author" onChange={this.handleChange}></input> */}
+              {/* <label htmlFor="authorAvatar">Image:</label> */}
+              {/* <input type="text" id="fname" name="authorAvatar" onChange={this.handleChange}></input> */}
               <label htmlFor="content" >Content: </label>
               <textarea type="text" id="pname" name="content" onChange={this.handleChange}></textarea>
               <label htmlFor="link">Link:</label>

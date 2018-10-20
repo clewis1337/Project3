@@ -2,6 +2,7 @@
 import React, { Component } from "react";
 import Forum from "../components/Forum";
 import Dashboard from "../components/Dashboard";
+import Jumbotron from "../components/Jumbotron";
 
 class Topic extends Component {
     state = { //Start as empty, need to query database to get posts about topic
@@ -70,6 +71,7 @@ class Topic extends Component {
 
     render(){ return (
         <div>
+            <Jumbotron></Jumbotron>
             <Dashboard getPosts={this.getPosts} location={this.props.match.params.id}/>
             <Forum 
               PostData={this.state.Posts}
