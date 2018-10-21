@@ -15,15 +15,13 @@ class Directory extends Component {
     fetch(`/all`) //Ajax call getting all posts
         .then(res => res.json())
         .then((result) => {
-          console.log(result)
             result.forEach(post => {
               console.log("post", post)
               if((!topicsArray.includes(post.topicTitle)) && (post.topicTitle !== undefined)) 
-                  topicsArray.push({topicTitle: post.topicTitle});              
+                  topicsArray.push({topicTitle: post.topicTitle, topicID: post.topicID});              
             });
         }).then(() => this.setState({userTopicArea: topicsArray}))
         .catch(error => console.error('Error:', error));
-        console.log(this.state.userTopicArea)
   }
 
   render(){
@@ -33,8 +31,8 @@ class Directory extends Component {
           
         </Jumbotron>
 
-      <DirectoryTable TopicData={DummyData}></DirectoryTable>
-      <DirectoryTable TopicData={this.state.userTopicArea}></DirectoryTable>
+      <DirectoryTable Title="Welcome Area" TopicData={DummyData}></DirectoryTable>
+      <DirectoryTable Title="Public Forum" TopicData={this.state.userTopicArea}></DirectoryTable>
       </Container>
 
   
