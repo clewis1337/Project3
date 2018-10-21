@@ -62,3 +62,6 @@ div[data-reactroot] {
   font-weight: bold;
   font-family: 'Roboto',arial,sans-serif;
 }
+#pname, #fname{
+  border: 1.5px solid black;
+}
