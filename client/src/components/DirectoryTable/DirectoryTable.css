@@ -20,7 +20,7 @@ h4{
 }
 
 table, tr {
-    border: 1px solid black;
+    border: 2px solid gray;
  
 }
 
@@ -44,9 +44,16 @@ th {
 
 .header1{
     text-align: center;
+    color: white;
+    text-shadow: 2px 2px grey;
+   font-size: 20px;
+
   
 }
 
-.header2{
-    background-color:lightgrey;
+
+
+.colorit{
+    background-color: orange;
+  
 }

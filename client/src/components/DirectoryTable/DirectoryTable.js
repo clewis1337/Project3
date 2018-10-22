@@ -8,9 +8,9 @@ const DirectoryTable = (props) => (
             <h4>{props.Title}</h4>
         </header>
         <table className="table1">
-        <tr>     
+        <tr className="colorit">   
             <th></th>
-            <th className="header1">Getting Started</th>
+            <th className="header1"> Getting Started</th>
             <th></th>
             <th></th>         
         </tr>      

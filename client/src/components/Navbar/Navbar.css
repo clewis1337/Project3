@@ -19,6 +19,9 @@ nav.navbar.navbar-default {
   flex-direction: row;
   font-size: 20px;
   padding: 10px;
+  margin-left: 40px;
+  margin-right: 40px;
+ 
 }
 
 .loginArea {
@@ -26,8 +29,13 @@ nav.navbar.navbar-default {
   top: 25px;
   right: 15px;
   font-size: 20px;
+  margin-right:50px;
+ 
 }
 
 .nav-link4 {
   width: 125px;
 }
+
+
+ 

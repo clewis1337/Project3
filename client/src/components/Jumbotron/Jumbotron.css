@@ -16,10 +16,15 @@ h1{
   font-family: 'Delius Swash Caps', cursive;
 }
 
-h2, h3{
+h7, h3{
 	text-align: center;
 	font-size: 25px;
   color:white;
   text-shadow: 2px 2pX grey;
   font-family: 'Delius Swash Caps', cursive;
+}
+
+h7{
+	text-align: center;
+	margin-left: 35%;
 }

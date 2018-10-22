@@ -106,6 +106,9 @@ class Account extends Component {
           
         </Jumbotron>
         <br /><br />
+        <br/>
+       <br/>
+       <br/>
         <GoogleLogin className={this.state.isLoggedIn ? "hide" : "show google-button"}
         clientId="479285736113-djjif3mrb737g30fcnsuhbcdg356bhem.apps.googleusercontent.com"
         buttonText="Login"
@@ -118,7 +121,11 @@ class Account extends Component {
         </GoogleLogin>
         <AccountDetails isLoggedIn={this.state.isLoggedIn} createUser={this.createUser} userName={this.state.userName} userAvatar={this.state.userAvatar}/>
         <br /><br />
-       
+    
+       <br/>
+       <br/>
+       <br/>
+       <br/>
       </Container>
     )}
   }
