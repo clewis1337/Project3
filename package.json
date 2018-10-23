@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Mern Demo",
   "engines": {
-    "node": "v8.11.1"
+    "node": "8.11.1"
   },
   "main": "server.js",
   "scripts": {
