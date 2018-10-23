@@ -61,4 +61,29 @@ div[data-reactroot] {
   font-size: 32px;
   font-weight: bold;
   font-family: 'Roboto',arial,sans-serif;
+
+}
+
+
+
+.lessontopics {
+  /* display: inline-block; */
+  /* vertical-align: right; */
+  padding: 0 24px 24px 24px 24px;
+  font-size: 16px;
+  /* font-weight: bold; */
+  font-family: 'Roboto',arial,sans-serif;
+  justify-items: right;
+  text-justify: auto;
+  justify-content: baseline;
+  align-self: stretch;
+  /* text-align: right; */
+
+  
+}
+
+
+.container{
+  text-align: center;
+/* align-self: auto; */
 }
