@@ -18,7 +18,7 @@
   "author": "Craig Lewis <clewis1337@gmail.com>",
   "license": "ISC",
   "devDependencies": {
-    "concurrently": "^3.5.0",
+    "concurrently": "^4.0.1",
     "nodemon": "^1.11.0"
   },
   "dependencies": {
