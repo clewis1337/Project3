@@ -1,6 +1,9 @@
 {
   "name": "mern",
   "version": "0.1.0",
+  "engines": {
+    "node": "8.11.1"
+  },
   "private": true,
   "proxy": "http://localhost:3001/",
   "dependencies": {
