@@ -12,7 +12,7 @@
     "build": "cd client && npm run build && cd ..",
     "heroku-postbuild": "npm run build"
   },
-  "author": "",
+  "author": "Craig Lewis <clewis1337@gmail.com>",
   "license": "ISC",
   "devDependencies": {
     "concurrently": "^3.5.0",
@@ -28,5 +28,6 @@
     "react-google-login": "^3.2.1",
     "react-modal": "^3.6.1",
     "react-router-dom": "^4.3.1"
-  }
+  },
+  "repository": "https://github.com/clewis1337/Project3.git"
 }
