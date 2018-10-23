@@ -32,8 +32,9 @@ const Forum = (props) => (
                             </div>
                         </div>
                         <div class="col-lg-4" id="editButtons">
-                            <button onClick={() => props.showModal(eachPost._id)}>Submit Edit</button>
-                            <button onClick={() => props.deletePost(eachPost._id)}>Delete</button>
+                            {/* Buttons will hide if user is not the ownder */}
+                            <button className={(localStorage.getItem('userName')===eachPost.author) ? "" : "hide"} onClick={() => props.showModal(eachPost._id)}>Edit</button>
+                            <button className={(localStorage.getItem('userName')===eachPost.author) ? "" : "hide"} onClick={() => props.deletePost(eachPost._id)}>Delete</button>
                         </div>
                     </div>
                 </div>

@@ -13,7 +13,9 @@
 .AuthorSection {
     font-size: 15px
 }
-
+.hide{
+    visibility: hidden;
+}
 .postWrapper {
     box-shadow: 3px 3px orange, -1em 0 .4em olive;
     margin-top: 20px;

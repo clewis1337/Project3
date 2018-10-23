@@ -10,11 +10,12 @@ const DirectoryTable = (props) => (
         <table className="table1">
         <tr className="colorit">   
             <th></th>
-            <th className="header1"> Getting Started</th>
+            <th />
+            {/* <th className="header1"> Getting Started</th> */}
             <th></th>
             <th></th>         
         </tr>      
-    <tr>
+    <tr className="topicHeader">
         <th>Topic</th>
         <th>Topic Count</th>
         <th>Post Count</th>
@@ -22,7 +23,7 @@ const DirectoryTable = (props) => (
     </tr>
     {/* This will render a row for each topic */}
     {props.TopicData.map(eachTopic => (
-    <tr>
+    <tr className="topic">
         {/* <td>{eachTopic.icon}</td> */}
         <td><a href={"/topic/" + eachTopic.topicID}>{eachTopic.topicTitle}</a></td>
         <td>{eachTopic.topicsCount}</td>
