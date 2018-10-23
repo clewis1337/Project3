@@ -2,11 +2,12 @@
 	background-color: #FF9933;
 	position: relative;
 	width: 100%;
-	margin-top: 70px;
+	margin-top: 20px;
+	padding-bottom: 1%;
 }
 
 h1{
-	margin-top: 84px;
+	margin-top: 83px;
 	text-align: center;
 	font-size: 90px;
 	font-weight: bold;
@@ -15,7 +16,7 @@ h1{
   font-family: 'Delius Swash Caps', cursive;
 }
 
-h2, h3{
+h7, h3{
 	text-align: center;
 	font-size: 25px;
   color:white;
@@ -23,6 +24,7 @@ h2, h3{
   font-family: 'Delius Swash Caps', cursive;
 }
 
-h3{
-  padding-bottom: 40px;
+h7{
+	text-align: center;
+	margin-left: 35%;
 }

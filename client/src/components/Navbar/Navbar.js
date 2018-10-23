@@ -26,19 +26,7 @@ const Navbar = props => (
           </Link>
 
         </li>
-             <li className="nav-item">
-          <Link
-            to="/Account"
-            className={
-              window.location.pathname === "/Account" || window.location.pathname === "/Account"
-                ? "nav-link active"
-                : "nav-link"
-            }
-          >
-            Login
-          </Link>
-
-        </li>
+         
          <li className="nav-item">
           <Link
             to="/directory/:id"
@@ -60,15 +48,29 @@ const Navbar = props => (
             className={
               window.location.pathname === "/topic/:id"
                 ? "nav-link active"
-                : "nav-link"
+                : "nav-link4"
             }
           >
-          Lesson plans
+          Lesson Plans
           </Link>         
         </li>
         
       </ul>
-      <div className="loginArea" id="loginArea">Welcome Guest.  Please Login</div>
+
+      
+      <li className="nav-item">
+          <Link
+            to="/Account"
+            className={
+              window.location.pathname === "/Account" || window.location.pathname === "/Account"
+                ? "nav-link active"
+                : "nav-link"
+            }
+          >
+           <div className="loginArea" id="loginArea">Welcome Guest.  Please Login</div>
+          </Link>
+
+        </li>
       </div>
     
   </nav>

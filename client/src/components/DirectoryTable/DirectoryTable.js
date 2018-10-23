@@ -2,34 +2,33 @@ import React, { Component } from "react";
 import "./DirectoryTable.css";
 
 const DirectoryTable = (props) => (
-    <div>
+    <div> {console.log("propsdtable", props)}
     <div>
         <header className = "click">
-            <h4>Topic Directory</h4>
+            <h4>{props.Title}</h4>
         </header>
         <table className="table1">
-        <tr>     
+        <tr className="colorit">   
             <th></th>
-            <th></th>
-            <th className="header1">Getting Started</th>
+            <th className="header1"> Getting Started</th>
             <th></th>
             <th></th>         
         </tr>      
-<tr>
-    <th></th>
-    <th>Topic</th>
-    <th>Link</th>
-    <th>Topic Count</th>
-    <th>Post Count</th>
-</tr>
- {props.TopicData.map(eachTopic => (
-   <tr>
-    <td>{eachTopic.icon}</td>
-    <td>{eachTopic.Topic}</td>
-    <td>{eachTopic.link}</td>
-    <td>{eachTopic.topicsCount}</td>
-    <td>{eachTopic.postsCount}</td>
- </tr> ))}
+    <tr>
+        <th>Topic</th>
+        <th>Topic Count</th>
+        <th>Post Count</th>
+        <th>Last Edited</th>
+    </tr>
+    {/* This will render a row for each topic */}
+    {props.TopicData.map(eachTopic => (
+    <tr>
+        {/* <td>{eachTopic.icon}</td> */}
+        <td><a href={"/topic/" + eachTopic.topicID}>{eachTopic.topicTitle}</a></td>
+        <td>{eachTopic.topicsCount}</td>
+        <td>{eachTopic.postsCount}</td>
+        <td>{eachTopic.lastEdited}</td>
+    </tr> ))}
 
   </table>
   </div>

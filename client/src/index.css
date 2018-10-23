@@ -25,7 +25,7 @@ div[data-reactroot] {
   border-width: 0;
   background: lightgray;
   box-shadow: 1px 4px 5px 1px rgba(0,0,0,0.1);
-  color: #737373;
+  color: white;
   border-radius: 5px;
   white-space: nowrap;
   box-shadow: 1px 1px 0px 1px rgba(0,0,0,0.05);
@@ -36,9 +36,9 @@ div[data-reactroot] {
 
 }
 .google-button:hover{
-   background-color: #ac4c4c;
+   background-color: rgb(1, 158, 255);
     transition-duration: 10ms;
-    box-shadow: 1px 4px 5px 1px rgba(0,0,0,0.1);
+    box-shadow: 1px 4px 5px 1px rgba(0, 0, 0, 0.1);
 }
     
 .google-button__icon {
