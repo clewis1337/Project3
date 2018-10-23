@@ -36,7 +36,7 @@ const Navbar = props => (
                 : "nav-link"
             }
           >
-            Topics
+            Forum Directory
           </Link>
       
        

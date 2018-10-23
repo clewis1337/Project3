@@ -17,7 +17,7 @@ class Directory extends Component {
         .then((result) => {
             result.forEach(post => {
               console.log("post", post)
-              if((!topicsArray.includes(post.topicTitle)) && (post.topicTitle !== undefined)) 
+              if((!topicsArray.includes(post.topicTitle)) && (post.topicTitle !== undefined) && (parseInt(post.topicID) < 300) && (parseInt(post.topicID) > 3)) 
                   topicsArray.push({topicTitle: post.topicTitle, topicID: post.topicID});              
             });
         }).then(() => this.setState({userTopicArea: topicsArray}))
@@ -32,7 +32,7 @@ class Directory extends Component {
         </Jumbotron>
 
       <DirectoryTable Title="Welcome Area" TopicData={DummyData}></DirectoryTable>
-      <DirectoryTable Title="Public Forum" TopicData={this.state.userTopicArea}></DirectoryTable>
+      <DirectoryTable Title="Public Forum" TopicData={this.state.userTopicArea} directoryID={this.props.match.params.id}></DirectoryTable>
       </Container>
 
   

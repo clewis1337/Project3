@@ -2,18 +2,21 @@
         {
             "topicTitle": "Welcome Area",
             "link": "/WelcomeArea",
+            "topicID": 1,
             "topicsCount": 2,
             "postsCount": 13
         },
         {
             "topicTitle": "Announcements",
             "link": "/Announcements",
+            "topicID": 2,
             "topicsCount": 5,
             "postsCount": 15
         },
         {
             "topicTitle": "GENERAL CHAT & DISCUSSION",
             "link": "/GeneralChat",
+            "topicID": 3,
             "topicsCount": 4,
             "postsCount": 6
         }

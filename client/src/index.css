@@ -87,3 +87,7 @@ div[data-reactroot] {
   text-align: center;
 /* align-self: auto; */
 }
+
+.hide {
+  visibility: hidden
+}
