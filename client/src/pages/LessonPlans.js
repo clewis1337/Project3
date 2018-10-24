@@ -29,7 +29,7 @@ class LessonPlans extends Component {
         <h2>Choose a Lesson Plan</h2>
         {/* <Card> */}
         
-<div className="container">
+<div className={this.props.match.params.id === 0 ? "container show": "container"}>
     {/* <div className="cards"> */}
     <div className={this.props.match.params.id === 1 ? "grade3": "hide"}>
     <h2>Third Grade</h2>
@@ -99,7 +99,7 @@ Multi-Lesson Reviews
 <h2>Fifth Grade</h2>
 <a href="lesson5/topic/:id">
 <img id="cover" src="/images/books/5thGrade.jpg" alt=""/></a>
-</div>
+
 <div className="lessontopics"> 
 <a href="/topic/300">Lesson 1: Where Are You From?</a> <br/>
 <a href="/topic/300">Lesson 2: What Do You Do On Weekends?</a> <br/>
@@ -119,6 +119,7 @@ Special 4
 Special 5
 <a href="/topic/300">Lesson 11: I Want to Be a Movie Director</a> <br/>
 Review 2
+   </div>
    </div>
 <div className={this.props.match.params.id === 4 ? "grade6": "hide"}>
 <h2>Sixth Grade</h2>

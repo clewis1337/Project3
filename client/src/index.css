@@ -91,3 +91,6 @@ div[data-reactroot] {
 .hide {
   visibility: hidden
 }
+.show {
+  visibility: visible !important
+}
