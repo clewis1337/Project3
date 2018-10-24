@@ -33,7 +33,7 @@ class LessonPlans extends Component {
     {/* <div className="cards"> */}
     <div className={this.props.match.params.id === 1 ? "grade3": "hide"}>
     <h2>Third Grade</h2>
-    <a href="lesson3/topic/3001">
+    <a href="lesson3/topic/301">
     <img id="cover" src="/images/books/3rdGrade.jpg" alt=""/></a>
    
     {/* <div className="container"> */}

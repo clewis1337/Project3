@@ -44,9 +44,9 @@ const Navbar = props => (
 
         <li className="nav-item">
           <Link
-            to="/lessonplans/0"
+            to="/lessonplans/1"
             className={
-              window.location.pathname === "/lessonplans/0"
+              window.location.pathname === "/lessonplans/1"
                 ? "nav-link active"
                 : "nav-link4"
             }
