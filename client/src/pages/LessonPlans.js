@@ -61,7 +61,6 @@ class LessonPlans extends Component {
       Multi-Lesson Reviews
       *Textbook + CD Preview*
       *Cheonjae Ham Curriculum Outlines*
-{/* </div> */}
       </div>
     </div>
 
@@ -125,7 +124,7 @@ Review 2
 <h2>Sixth Grade</h2>
 <a href="lesson6/topic/:id">
 <img id="cover" src="/images/books/6thGrade.jpg" alt=""/></a>
-</div>
+
 <div className="lessontopics"> 
 <a href="/topic/300">Lesson 1:What Grade Are You In?</a> <br/>
 <a href="/topic/300">Lesson 2:I Have a Cold</a> <br/>
@@ -146,11 +145,12 @@ Special 5
 <a href="/topic/300">Lesson 11: We Should Save the Earth</a> <br/>
 Review 2
    </div>
+   </div>
 <div className={this.props.match.params.id === 5 ? "grade7": "hide"}>
 <h2>Seventh Grade</h2>
 <a href="lesson7/topic/:id">
 <img id="cover" src="/images/books/7thGrade.jpg" alt=""/></a>
-</div>
+
 <div className="lessontopics"> 
 <a href="/topic/300">Lesson 1: A Nice Day</a> <br/>
 <a href="/topic/300">Lesson 2: How Do You Spend Your Day</a> <br/>
@@ -169,11 +169,12 @@ Reading for Fun 1
 <a href="/topic/300">Project 4</a> <br/>
 <a href="/topic/300">Reading for Fun 4</a> <br/>
    </div>
+   </div>
 <div className={this.props.match.params.id === 6 ? "grade8": "hide"}>
 <h2>Eigth Grade</h2>
 <a href="lesson8/topic/:id">
 <img id="cover" src="/images/books/8thGrade.jpg" alt=""/> </a>
-</div>
+
 <div className="lessontopics"> 
 <a href="/topic/300">Lesson 1: Off to a Good Start</a> <br/>
 <a href="/topic/300">Lesson 2: Connecting With the World</a> <br/>
@@ -191,6 +192,7 @@ Reading for Fun 1
 <a href="/topic/300">Lesson 8: Viva, South America!</a> <br/>
 <a href="/topic/300">Project 4</a> <br/>
 <a href="/topic/300">Reading For Fun 4</a> <br/>
+   </div>
    </div>
 </div>
 {/* </div> */}
