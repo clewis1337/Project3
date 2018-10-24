@@ -29,11 +29,12 @@ class LessonPlans extends Component {
         <h2>Choose a Lesson Plan</h2>
         {/* <Card> */}
         
-<div className={this.props.match.params.id === 0 ? "container show": "container"}>
+<div className={"container"}>
     {/* <div className="cards"> */}
-    <div className={this.props.match.params.id === 1 ? "grade3": "hide"}>
+    {/* <div className={this.props.match.params.id === 1 ? "grade3": "hide"}> */}
+    <div className="grade3">
     <h2>Third Grade</h2>
-    <a href="lesson3/topic/301">
+    <a href="lesson3/topic/3001">
     <img id="cover" src="/images/books/3rdGrade.jpg" alt=""/></a>
    
     {/* <div className="container"> */}
@@ -64,7 +65,8 @@ class LessonPlans extends Component {
       </div>
     </div>
 
-    <div className={this.props.match.params.id === 2 ? "grade4": "hide"}>
+    {/* <div className={this.props.match.params.id === 2 ? "grade4": "hide"}> */}
+    <div className="grade4">
     <h2>Fourth Grade</h2>
     <a href="lesson4/topic/401">
     <img id="cover" src="/images/books/4thGrade.jpg" alt=""/></a>
@@ -95,7 +97,8 @@ Multi-Lesson Reviews
    </div>
     </div>
 
-<div className={this.props.match.params.id === 3 ? "grade5": "hide"}>
+{/* <div className={this.props.match.params.id === 3 ? "grade5": "hide"}> */}
+<div className="grade5">
 <h2>Fifth Grade</h2>
 <a href="lesson5/topic/:id">
 <img id="cover" src="/images/books/5thGrade.jpg" alt=""/></a>
@@ -121,7 +124,8 @@ Special 5
 Review 2
    </div>
    </div>
-<div className={this.props.match.params.id === 4 ? "grade6": "hide"}>
+{/* <div className={this.props.match.params.id === 4 ? "grade6": "hide"}> */}
+<div className="grade6">
 <h2>Sixth Grade</h2>
 <a href="lesson6/topic/:id">
 <img id="cover" src="/images/books/6thGrade.jpg" alt=""/></a>
@@ -147,7 +151,8 @@ Special 5
 Review 2
    </div>
    </div>
-<div className={this.props.match.params.id === 5 ? "grade7": "hide"}>
+{/* <div className={this.props.match.params.id === 5 ? "grade7": "hide"}> */}
+<div className="grade7">
 <h2>Seventh Grade</h2>
 <a href="lesson7/topic/:id">
 <img id="cover" src="/images/books/7thGrade.jpg" alt=""/></a>
@@ -171,7 +176,8 @@ Reading for Fun 1
 <a href="/topic/300">Reading for Fun 4</a> <br/>
    </div>
    </div>
-<div className={this.props.match.params.id === 6 ? "grade8": "hide"}>
+{/* <div className={this.props.match.params.id === 6 ? "grade8": "hide"}> */}
+<div className="grade8">
 <h2>Eigth Grade</h2>
 <a href="lesson8/topic/:id">
 <img id="cover" src="/images/books/8thGrade.jpg" alt=""/> </a>

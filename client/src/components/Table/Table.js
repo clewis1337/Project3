@@ -1,15 +1,24 @@
 import React from "react";
 import "./Table.css";
 import { Card } from "react-simple-card";
-
+import { Link } from "react-router-dom";
 
 const Table = () => (
   <Card>
 <div className="container">
     <div className="cards">
     <div className="grade3">
-    <a href="/lessonplans/1">
-    <img id="cover" src="/images/books/3rdGrade.jpg" alt=""/></a>
+    <Link
+            to="/"
+            className={
+              window.location.pathname === "/lessonplans/1" || window.location.pathname === "/lessonplans/1"
+                ? "nav-link active"
+                : "nav-link"
+            }
+          >
+              <img id="cover" src="/images/books/3rdGrade.jpg" alt=""/>
+          </Link>
+
     </div>
 
     <div className="grade4">
